@@ -1,0 +1,19 @@
+.errorBoundary {
+    width: 100vw;
+    height: 100vh;
+    font-size: 16px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.errorBoundary h3,
+.errorBoundary section {
+    width: 300px;
+    margin: 5px;
+    border: 2px solid #222;
+    border-radius: 3px;
+    padding: 3px;
+}

@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css?family=Google+Sans:200,300,400,500,600,700,900");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gradient-left: #283c86 2%;
+  --gradient-right: #45a247 98%;
+  --gradient-background: linear-gradient(90deg, #283c86 2%, #45a247 98%);
+  --dark-blue: #191f25;
+}
+
+body {
+  font-family: "Google Sans", "Quicksand", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: var(--gradient-background);
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Small (sm) devices (landscape phones, 567px and up) */
+@media screen and (max-width: 568px) {
+}
+
+/* Medium (md) devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+}
