@@ -1,0 +1,49 @@
+name: Firebase CI
+
+on:
+  push:
+    branches: ["development"]
+  pull_request:
+    branches: ["development"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: npm ci
+      - run: npm run build --if-present
+      - name: Archive Build
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: build
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Download Build
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: build
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.ASHESI_HACKER_LEAGUE_FIREBASE_TOKEN }}
+          CI: false
