@@ -1,0 +1,120 @@
+.wrapper {
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+.headline {
+  padding: 2.5em;
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.loginForm {
+  padding-left: 2.5em;
+  
+  input {
+    color: white;
+    display: block;
+    width: 80%;
+    height: 30px;
+    border-radius: 11px;
+    margin-bottom: 2.625em;
+    background: rgb(81,113,136);
+    padding: 1.5em;
+    font-size: 1.2rem;
+  }
+
+  ::placeholder {
+    color: white;
+  }
+
+  button {
+    text-align: center;
+    width: 80%;
+    height: 50px;
+    border-radius: 11px;
+    background: #191F25;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 2em;
+  }
+
+  button:hover {
+    cursor: grab;
+  }
+
+  a {
+    text-decoration: underline;
+    color: white;
+  }
+}
+
+.codeTrophy {
+  position: relative;
+  top: 30%;
+  right: -20%;
+
+  // trophy
+  img:nth-child(1) {
+    z-index: -1;
+    position: absolute;
+    right: -10%;
+    bottom: 50%;
+    width: 100%;
+    animation: rotate 1s linear infinite alternate;
+  }
+
+  // blue-bordered code
+  img:nth-child(2) {
+    width: 100%;
+  }
+}
+
+/* Medium (md) devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  .headline {
+  
+    h1 {
+      font-size: 4rem;
+      text-align: left;
+    }
+  }
+
+  .loginForm {
+    input {
+      width: 450px;
+    }
+
+    button {
+      width: 450px;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
+
+  .codeTrophy {
+    top: 10%;
+    right: -20%;
+
+    // trophy
+    img:nth-child(1) {
+      right: 25%;
+      bottom: 30%;
+      width: 40%;
+    }
+
+    // blue-bordered code
+    img:nth-child(2) {
+      right: 55%;
+      width: 60%;
+    }
+
+  }
+}
