@@ -16,6 +16,7 @@ function Login() {
 	const [errorToken, setErrorToken] = useState("");
 
 	const handleSubmit = (e) => {
+		e.preventDefault();
 		if (!teamName) {
 			setErrorTeamName("*team name is required");
 		}

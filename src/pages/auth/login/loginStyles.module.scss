@@ -29,7 +29,7 @@
   }
 
   ::placeholder {
-    color: white;
+    color: rgba(255, 255, 255, 0.4);
   }
 
   button {
@@ -48,8 +48,12 @@
   }
 
   a {
-    text-decoration: underline;
-    color: white;
+    color: rgb(6, 17, 33);
+    font-weight: 700;
+  }
+
+  a:hover {
+    // font-weight: 700;
   }
 }
 
