@@ -8,8 +8,6 @@ const Challenges = () => {
   const [currentSeason, setCurrentSeason] = useState("spring-2023");
   const challengesCount = 7;
   const totalCount = 12;
-  const BUBBLE_AVAILABLE = "bubbleAvailable";
-  const BUBBLE_UNAVAILABLE = "bubbleUnavailable";
 
   return (
     <div className={challengesStyles.wrapper}>
@@ -35,11 +33,9 @@ const Challenges = () => {
               key={id}
               route={`/${currentSeason}/${id}`}
               id={id}
-              css={`
-                ${id > totalCount - challengesCount
-                  ? BUBBLE_UNAVAILABLE
-                  : BUBBLE_AVAILABLE}
-              `}
+              st={`${
+                id > totalCount - challengesCount ? "bubbleGrey" : "bubble"
+              }`}
             />
           ))}
       </div>

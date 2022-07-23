@@ -23,23 +23,20 @@ h1 {
   align-content: flex-start;
 }
 
-.challengeBubble {
+select {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
-  text-align: center;
-  background-color: #283c86;
-  border-radius: 50%;
-  margin: 1rem;
-  font-size: 1.5rem;
+  border: none;
+  font-size: 1.2rem;
+  width: 15rem;
+  outline: none;
+  margin: 1rem 0;
+  cursor: pointer;
 
-  a {
-    display: inline-block;
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    color: white;
-
-    &:hover {
-      background-color: #fafafa;
-    }
+  option {
+    background-color: #333;
+    padding: 1rem;
+    cursor: pointer;
   }
 }
