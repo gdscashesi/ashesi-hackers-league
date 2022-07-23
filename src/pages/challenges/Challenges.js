@@ -8,6 +8,7 @@ const Challenges = () => {
   const [currentSeason, setCurrentSeason] = useState("spring-2023");
   const challengesCount = 7;
   const totalCount = 12;
+  const [BUBBLE_GREY, BUBBLE_BLUE] = ["bubbleGrey", "bubbleBlue"];
 
   return (
     <div className={challengesStyles.wrapper}>
@@ -26,7 +27,7 @@ const Challenges = () => {
         </select>
       </div>
       <div className={challengesStyles.challengesList}>
-        {Array(challengesCount)
+        {Array(totalCount)
           .fill(0)
           .map((challenges, id) => (
             <ChallengeBubble
@@ -34,7 +35,7 @@ const Challenges = () => {
               route={`/${currentSeason}/${id}`}
               id={id}
               st={`${
-                id > totalCount - challengesCount ? "bubbleGrey" : "bubble"
+                id > totalCount - challengesCount ? BUBBLE_GREY : BUBBLE_BLUE
               }`}
             />
           ))}

@@ -21,6 +21,8 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
+
+  overflow-y: scroll;
 }
 
 select {
@@ -30,9 +32,9 @@ select {
   border: none;
   font-size: 1.2rem;
   width: 15rem;
-  outline: none;
   margin: 1rem 0;
   cursor: pointer;
+  font-family: var(--app-font-primary);
 
   option {
     background-color: #333;
