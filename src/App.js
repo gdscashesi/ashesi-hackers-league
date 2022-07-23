@@ -6,7 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "pages/home/Home";
 import Login from "pages/auth/login/Login";
 import Register from "pages/auth/register/Register";
-import Table from "pages/table/Table";
+import Rankings from "pages/rankings/Rankings";
+import Challenges from "pages/challenges/Challenges";
 import PageNotFound from "pages/errors/error4O4/PageNotFound";
 
 // styles
@@ -22,7 +23,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/table" element={<Table />} />
+          <Route path="/rankings" element={<Rankings />} />
+          <Route path="/challenges" element={<Challenges />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>

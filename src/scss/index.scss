@@ -9,16 +9,21 @@
 }
 
 :root {
-  --gradient-left: #283c86 2%;
-  --gradient-right: #45a247 98%;
-  --gradient-background: linear-gradient(90deg, #283c86 2%, #45a247 98%);
+  --gradient-blue: #283c86;
+  --gradient-green: #45a247;
+  --gradient-background: linear-gradient(
+    90deg,
+    var(--gradient-blue) 2%,
+    var(--gradient-green) 98%
+  );
   --dark-blue: #191f25;
+  --app-font-primary: "Google Sans";
 }
 
 body {
-  font-family: "Google Sans", "Quicksand", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--app-font-primary), "Quicksand", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -26,7 +31,8 @@ body {
 }
 
 button,
-input {
+input,
+select {
   outline: none;
   border: none;
 }
