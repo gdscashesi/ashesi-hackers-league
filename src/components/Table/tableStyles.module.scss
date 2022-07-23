@@ -3,7 +3,8 @@
     position: absolute;
     left: 5%;
     right: 5%;
-    border: 0px solid #6d6b6b;
+    top: 5%;
+    border: 1px solid #6d6b6b;
     border-collapse: collapse;  
     width: 100%;
     height: 200px;
@@ -14,6 +15,7 @@
     
 th {
     border-bottom: 1px solid #6d6b6b;
+    border: 1px solid #6d6b6b;
     width:5%;
     color: rgb(7, 7, 44);
 }
@@ -21,6 +23,7 @@ th {
 td {
     text-align: center;
     border-bottom: 1px solid #6d6b6b;
+    border: 1px solid #6d6b6b;
 }
 
 tr{
