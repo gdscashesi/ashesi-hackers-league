@@ -50,14 +50,14 @@
 .formSection{
 	position: absolute;
 	height: 90%;
-  width: 20%;
+  width: 21%;
 	padding-top: 2rem;
 	left: 1rem;
 
   label{
     color: white;
     font-size:120%;
-    // max-width: 200rem;
+    width: 100%;
   }
   input{
     position: relative;
@@ -141,6 +141,7 @@
 .selectFieldInput {
   display: none;
   margin-top: 1rem;
+  border-radius:0.3rem;
 }
 
 .selectFieldInput:checked + .selectFieldInputText {
@@ -185,6 +186,7 @@
   position: relative;
   display: block;
   border-bottom: 1px  solid #D9D9D933;
+  border-radius:0.3rem;
   padding: 15px;
   color: #FFFFFF;
   background-color: #527289;
@@ -284,10 +286,10 @@
 }
 
 /* Already registered? Login */
-small {
+.endTag >small {
 	position: absolute;
 	width: 487px;
-	left: 200%;
+	left: 180%;
 	top: 90%;
 	font-style: normal;
 	font-weight: 600;
@@ -365,11 +367,12 @@ small {
 
 }
   
-@media (max-width: 480px) {
+@media (max-width: 375px) {
   .emailfieldSection{
     left: 200%;
-    small {
-      left:0%;
-    }
   }
+  .endTag >small {
+      left:50%;
+    }
+  
 }
