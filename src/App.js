@@ -8,11 +8,11 @@ import Login from "pages/auth/login/Login";
 import Register from "pages/auth/register/Register";
 import Rankings from "pages/rankings/Rankings";
 import Challenges from "pages/challenges/Challenges";
-import Challenge from "pages/single_challenge/SingleChallenge";
 import PageNotFound from "pages/errors/error4O4/PageNotFound";
 
 // styles
 import appStyles from "scss/app.module.scss";
+import Test from "components/Table/Test";
 
 // utils
 
@@ -26,7 +26,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/rankings" element={<Rankings />} />
           <Route path="/challenges" element={<Challenges />} />
-          <Route path="/challenges/:id" element={<Challenge />} />
+          <Route path="/test" element={<Test/>} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>
