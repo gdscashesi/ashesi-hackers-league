@@ -61,17 +61,15 @@ const Register = ()=>{
     const errors ={};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if(!values.teamname){
-      errors.teamname = "Team Name is required"
-    }
-
-    if(!values.numberhackers){
-      errors.numberhackers = "number of hackers is required"
+      errors.teamname = "team name is required*"
+    }else if((values.teamname.length>20)){
+      errors.teamname = "team name is too long*"
     }
 
     if(!values.email){
-      errors.email = "email of hacker cannot be empty"
+      errors.email = "email cannot be empty*"
     } else if(!regex.test(values.email)){
-      errors.email = "Email is invalid"
+      errors.email = "invalid email"
     }
     return errors;
   }
@@ -103,16 +101,16 @@ return (
             <label>number of hackers</label><br/>
               <div className={registerStyles.selectFieldCurrent} tabIndex="1" name="numberhackers" onChange={(e) =>{setNumberHackers(e.target.value); handleChange(e)}}>
                   <div className={registerStyles.selectFieldValue}>
-                  <input className={registerStyles.selectFieldInput} type="radio" id="0" value={1} name="numberhackers" />
+                  <input className={registerStyles.selectFieldInput} type="radio" id="0" value={1} name="numberhackers"/>
                   {/* <p>{formErrors.numberhackers}</p> */}
                   <p className={registerStyles.selectFieldInputText}>solo</p>
                   </div>
                   <div className={registerStyles.selectFieldValue}>
-                  <input className={registerStyles.selectFieldInput} type="radio" id="1" value={2} name="numberhackers" />
+                  <input className={registerStyles.selectFieldInput} type="radio" id="1" value={2} name="numberhackers"/>
                   <p className={registerStyles.selectFieldInputText}>duo</p>
                   </div>
                   <div className={registerStyles.selectFieldValue}>
-                  <input className={registerStyles.selectFieldInput} type="radio" id="2" value={3} name="numberhackers" />
+                  <input className={registerStyles.selectFieldInput} type="radio" id="2" value={3} name="numberhackers"/>
                   <p className={registerStyles.selectFieldInputText}>trio</p>
                   </div>
                   <div className={registerStyles.selectFieldValue}>
@@ -165,7 +163,7 @@ return (
             {!numberHackers <1? <button type ="submit" >Register <strong>{teamName}</strong></button>:"" }
             </div>
             <div className={registerStyles.endTag}>
-              <small>Already registered?<span><Link to="/login" />Login</span></small>
+              <small>Already registered?<span><Link to="/login" /> Login</span></small>
             </div>
           </div>
         </div>
