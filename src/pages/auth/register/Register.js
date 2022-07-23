@@ -1,6 +1,8 @@
 // libraries
 import React, { useState,useEffect } from "react";
 import {Link} from "react-router-dom"
+
+//styles
 import registerStyles from "./registerStyles.module.scss"
 
 // images
@@ -38,11 +40,6 @@ const Register = ()=>{
     });
   };
 
-  const addFields = () => {
-    let newemail = { email: ''}
-    setTeamEmails([...teamEmails, newemail])
-}
-
 
   const handleSubmit = (e)=>{
     e.preventDefault()
@@ -51,10 +48,9 @@ const Register = ()=>{
     const data ={
       teamName,
       numberHackers,
-      teamEmails
+      teamEmails,
     }
     console.log(data)
-    console.log(test)
   }
 
   const validate = (values) => {
