@@ -1,0 +1,378 @@
+.mainContainer{
+	overflow-x: hidden !important;
+  >p{
+    font-size: 80%;
+    text-align:center;
+    color: rgb(233, 116, 116);
+  }
+
+}
+
+.homeLink {
+	position: absolute;
+	font-size: 90%;
+	color: white;
+	left: 1rem;
+	top: 1rem;
+  a{
+    cursor: pointer;
+    color: white;
+    // text-decoration: underline;
+  }
+  
+  :after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #283c86 2%, #45a247 98%);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  :hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+
+.pageHeader h1{
+	text-align: center;
+	color: white;
+	font-size:300%;
+  
+}
+
+.formSection{
+	position: absolute;
+	height: 90%;
+  width: 21%;
+	padding-top: 2rem;
+	left: 1rem;
+
+  label{
+    color: white;
+    font-size:120%;
+    width: 100%;
+  }
+  input{
+    position: relative;
+    padding-left: 1rem;
+    padding-right: 0.3rem;
+    height:2.5rem;
+    width:200%;
+    font-size: 100%;
+    color: white;
+    background-color:#527289;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+  }
+
+  .fieldSection{
+    padding-bottom: 1.3rem;
+    width: 100%;
+
+    >p{
+      color: rgb(233, 116, 116);
+    }
+  }
+
+}
+
+.selectField {
+    position: relative;
+    border-radius: 0.3rem;
+    display: block;
+    width:200%;
+    font-size: 18px;
+    color: white;
+    >label{
+      font-size:120%;
+    }
+}
+
+.selectFieldCurrent {
+  position: relative;
+  border-radius: 0.3rem;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+
+}
+.selectFieldCurrent:focus + .selectFieldList {
+  opacity: 1;
+  margin-top: 1rem;
+  -webkit-animation-name: none;
+          animation-name: none;
+  
+  .selectField__option {
+    cursor: pointer;
+    border-radius: 0.3rem;
+  }
+}
+
+.selectFieldCurrent:focus .selectFieldIcon {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+}
+
+.selectFieldIcon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 20px;
+  opacity: 0.3;
+  transition: 0.2s ease;
+}
+
+.selectFieldValue {
+  display: flex;
+}
+
+.selectFieldInput {
+  display: none;
+  margin-top: 1rem;
+  border-radius:0.3rem;
+}
+
+.selectFieldInput:checked + .selectFieldInputText {
+  display: block;
+  border-radius:0.3rem;
+  -webkit-border-radius:0.3rem  ;
+  -moz-border-radius:0.3rem  ;
+  -ms-border-radius:0.3rem  ;
+  -o-border-radius:0.3rem  ;
+}
+
+.selectFieldInputText {
+  display: none;
+  width: 100%;
+  font-size: small;
+  margin: 0;
+  padding: 15px;
+  background-color: #527289;
+}
+
+.selectFieldList {
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  font-size: small;
+  list-style: none;
+  opacity: 0;
+  -webkit-animation-name: HideList;
+          animation-name: HideList;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: step-start;
+          animation-timing-function: step-start;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.selectFieldOption {
+  position: relative;
+  display: block;
+  border-bottom: 1px  solid #D9D9D933;
+  border-radius:0.3rem;
+  padding: 15px;
+  color: #FFFFFF;
+  background-color: #527289;
+  align-items: center;
+  cursor: pointer;
+
+  >span{
+    color: #968787; padding-left: 1rem;
+    text-align: center;
+
+    img{
+      position: absolute;
+      width:10%;
+      left: 90%;
+      bottom: 0.2rem;
+
+      
+    }
+  }
+}
+  
+.selectFieldOption:hover, .selectFieldOption:focus {
+  color: #546c84;
+  background-color: #3f525f;
+}
+  
+@-webkit-keyframes HideList {
+  from {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+  to {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+    }
+  }
+  
+@keyframes HideList {
+  from {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+  to {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+    }
+  }
+
+.emailfieldSection{
+	position: relative;
+	display:flex;
+	flex-direction:column;
+	justify-content: space-between;
+	width:150%;
+	bottom:2px;
+	left: 250%;
+	padding: 1rem;
+
+  >input,button{
+    position: relative;
+    display: flex;
+    background: rgba(217, 217, 217, 0.2);
+    border-radius: 11px;
+    height:3rem;
+    width:150%;
+    padding-bottom: 2px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    color: #ffff;
+    font-size: small;
+  }
+  >p{
+    color: rgb(233, 116, 116);
+  }
+
+  >button{
+    background-color: #191F25;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-size:100%;
+    animation: spread 1s linear infinite alternate;
+    >strong{padding-left: 5px;}
+  }
+  /*firefox 19+ versions*/
+  >input::-moz-placeholder {
+    color: #fff;
+  }
+	/*IE  versions*/
+  >input::-ms-placeholder {
+    color: #fff;
+  }
+  /*Latest modern browsers */
+  >input::placeholder {
+    color: #fff;
+  }
+}
+
+/* Already registered? Login */
+.endTag >small {
+	position: absolute;
+	width: 487px;
+	left: 180%;
+	top: 90%;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 40px;
+	color: #FFFFFF;
+
+  span{
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.codeTrophy {
+	position: absolute !important;
+	width: 45%;
+	height: 50%;
+	right: 0;
+	left: 52%;
+	top: -1px;
+	mix-blend-mode: soft-light;
+	overflow-y: hidden;
+	overflow-x: hidden;
+  
+	// trophy
+	img:nth-child(1) {
+		position: absolute;
+		height: 120%;
+		width: 50%;
+		right: -45%;
+		bottom: 0%;
+		width: 100%;
+		animation: rotate 1s linear infinite alternate;
+
+	  }
+  
+}
+
+/*Animations*/  
+@keyframes rotate {
+	from {
+	  transform: translateY(-1rem);
+	}
+	to {
+	  transform: translateY(0rem);
+	}
+}
+  
+@keyframes spread {
+	from {
+	  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.08);
+	}
+  
+	to {
+	  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.08);
+	}
+}
+
+
+/*Media Queries*/
+@media screen and (min-width: 768px) {
+  .codeTrophy {
+    top: -1%;
+    left: 60%;
+    width:40%;
+
+    // trophy
+    img:nth-child(1) {
+      height: 120%;
+      bottom: 0%;
+    }
+  }
+
+
+}
+  
+@media (max-width: 375px) {
+  .emailfieldSection{
+    left: 200%;
+  }
+  .endTag >small {
+      left:50%;
+    }
+  
+}
