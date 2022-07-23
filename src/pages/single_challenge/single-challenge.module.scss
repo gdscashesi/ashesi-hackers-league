@@ -1,0 +1,37 @@
+.wrapper {
+  height: 100vh;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.details {
+  padding: 1rem;
+
+  color: white;
+}
+
+.categories {
+  display: flex;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  //   padding: 1rem;
+  justify-content: space-between;
+  text-align: center;
+
+  & > * {
+    flex-grow: 1;
+    padding: 1rem;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--gradient-blue);
+      color: white;
+      user-select: none;
+    }
+  }
+}
+
+.questions {
+  background-color: white;
+  flex-grow: 1;
+}
