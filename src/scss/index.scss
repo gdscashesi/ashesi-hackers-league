@@ -9,9 +9,13 @@
 }
 
 :root {
-  --gradient-left: #283c86 2%;
-  --gradient-right: #45a247 98%;
-  --gradient-background: linear-gradient(90deg, #283c86 2%, #45a247 98%);
+  --gradient-blue: #283c86;
+  --gradient-green: #45a247;
+  --gradient-background: linear-gradient(
+    90deg,
+    var(--gradient-blue) 2%,
+    var(--gradient-green) 98%
+  );
   --dark-blue: #191f25;
 }
 
