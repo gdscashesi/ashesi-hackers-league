@@ -20,7 +20,9 @@ const SingleChallenge = () => {
       <div className={challengeStyles.questions}>
         <div className={challengeStyles.categories}>
           {categories.map((category, index) => (
-            <div onClick={() => setCurrentQuestion(index)}>{category}</div>
+            <div key={category} onClick={() => setCurrentQuestion(index)}>
+              {category}
+            </div>
           ))}
         </div>
         <div>{categories[currentQuestion]}</div>
