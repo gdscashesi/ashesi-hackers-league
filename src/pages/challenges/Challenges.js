@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const Challenges = () => {
   const seasons = ["spring-2023", "fall-2022", "spring-2021", "fall-2020"];
-  const [currentSeason, setCurrentSeason] = useState("spring-2023");
+  const [, setCurrentSeason] = useState("spring-2023");
   const challengesCount = 7;
   const totalCount = 12;
   const [BUBBLE_GREY, BUBBLE_BLUE] = ["bubbleGrey", "bubbleBlue"];
@@ -32,7 +32,7 @@ const Challenges = () => {
           .map((challenges, id) => (
             <ChallengeBubble
               key={id}
-              route={`/${currentSeason}/${id}`}
+              route={`${id}`}
               id={id}
               st={`${
                 id > totalCount - challengesCount ? BUBBLE_GREY : BUBBLE_BLUE
