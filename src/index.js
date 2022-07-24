@@ -9,12 +9,6 @@ import App from "./App";
 import "scss/global.scss";
 import { ErrorBoundary } from "pages/errors/errorboundary/ErrorBoundary";
 
-// utils
-
-// redux
-
-// miscillaneous
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

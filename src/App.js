@@ -9,10 +9,8 @@ import Register from "pages/auth/register/Register";
 import Rankings from "pages/rankings/Rankings";
 import Challenges from "pages/challenges/Challenges";
 import SingleChallenge from "pages/single_challenge/SingleChallenge";
+import Sandbox from "pages/sandbox/Sandbox";
 import PageNotFound from "pages/errors/error4O4/PageNotFound";
-
-// styles
-import Test from "components/Table/Test";
 
 // utils
 
@@ -26,7 +24,7 @@ function App() {
         <Route path="/rankings" element={<Rankings />} />
         <Route path="/challenges" element={<Challenges />} />
         <Route path="/challenges/:id" element={<SingleChallenge />} />
-        <Route path="/test" element={<Test />} />
+        <Route path="/sandbox" element={<Sandbox />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>

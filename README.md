@@ -18,7 +18,7 @@ React & Firebase
 
 ...not yet
 
-## Contributors
+## Made with ❤️ by
 
 - Oheneba Dade
 - Simon Boateng
