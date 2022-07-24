@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    container_name: ashesi_hackers_league
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/ashesi-hackers-league/src
+      - /ashesi-hackers-league/node_modules
+    stdin_open: true
+    tty: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
