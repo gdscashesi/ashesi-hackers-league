@@ -10,22 +10,32 @@ import Rankings from "pages/rankings/Rankings";
 import Challenges from "pages/challenges/Challenges";
 import SingleChallenge from "pages/single_challenge/SingleChallenge";
 import Sandbox from "pages/sandbox/Sandbox";
-import PageNotFound from "pages/errors/error4O4/PageNotFound";
+import PageNotFound from "pages/errors/page_not_found/PageNotFound";
 
 // utils
+import {
+  HOME,
+  LOGIN,
+  REGISTER,
+  RANKINGS,
+  CHALLENGES,
+  SINGLE_CHALLENGE,
+  SANDBOX,
+  PAGE_NOT_FOUND,
+} from "utils/constants";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/rankings" element={<Rankings />} />
-        <Route path="/challenges" element={<Challenges />} />
-        <Route path="/challenges/:id" element={<SingleChallenge />} />
-        <Route path="/sandbox" element={<Sandbox />} />
-        <Route path="*" element={<PageNotFound />} />
+        <Route path={HOME} element={<Home />} />
+        <Route path={LOGIN} element={<Login />} />
+        <Route path={REGISTER} element={<Register />} />
+        <Route path={RANKINGS} element={<Rankings />} />
+        <Route path={CHALLENGES} element={<Challenges />} />
+        <Route path={SINGLE_CHALLENGE} element={<SingleChallenge />} />
+        <Route path={SANDBOX} element={<Sandbox />} />
+        <Route path={PAGE_NOT_FOUND} element={<PageNotFound />} />
       </Routes>
     </Router>
   );

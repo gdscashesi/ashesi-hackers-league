@@ -17,7 +17,7 @@ function Home() {
       <Numbering />
 
       <div className={homeStyles.headline}>
-        <h1> Ashesi Hacker League</h1>
+        <h1> Ashesi Hackers League</h1>
         <small>powered by gdsc-ashesi univesity</small>
         <br />
       </div>
