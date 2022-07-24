@@ -32,7 +32,7 @@
     margin: 1.8rem 0;
     background-color: var(--dark-blue);
     color: white;
-    animation: spread 1s linear infinite alternate;
+    animation: spread 1s linear infinite;
 
     a {
       color: white;
@@ -55,7 +55,7 @@
     right: -10%;
     bottom: 50%;
     width: 100%;
-    animation: rotate 1s linear infinite alternate;
+    animation: suspend 1s linear infinite alternate;
   }
 
   // blue-bordered code
@@ -73,7 +73,7 @@
   }
 }
 
-@keyframes rotate {
+@keyframes suspend {
   from {
     transform: translateY(-1rem);
   }
@@ -84,11 +84,11 @@
 
 @keyframes spread {
   from {
-    box-shadow: 0 0 0 0 rgba(25, 31, 37, 0.3);
+    box-shadow: 0 0 0 0 rgba(25, 31, 37, 0.5);
   }
 
   to {
-    box-shadow: 0 0 0 1rem rgba(25, 31, 37, 0.3);
+    box-shadow: 0 0 0 1rem rgba(25, 31, 37, 0);
   }
 }
 

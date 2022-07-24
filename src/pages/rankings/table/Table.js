@@ -2,23 +2,19 @@ import React from "react";
 
 import tableStyles from "./table.module.scss";
 
-const Table = ({ headers, body, width = "auto", height = "auto" }) => {
+const Table = ({ headers, body }) => {
   return (
     <div className={tableStyles.tableWrapper}>
-      <table
-        style={{ padding: "10px 10px", width: width, height: height }}
-        cellSpacing="0"
-      >
+      <table cellSpacing="0">
         <thead>
           <tr>
             {headers?.map((headName, index) => {
               return <th key={index}>{headName}</th>;
-            })}
+            }) ?? <div>loading...</div>}
           </tr>
         </thead>
-        <tbody></tbody>
-        {Object.values(body)?.map((data, index) => {
-          return (
+        <tbody>
+          {body?.map((data, index) => (
             <tr key={index}>
               <td>{index + 1}</td>
               <td>{data.name}</td>
@@ -27,8 +23,8 @@ const Table = ({ headers, body, width = "auto", height = "auto" }) => {
               <td>{data.sql}</td>
               <td>{data.algorithms + data.scripting + data.sql}</td>
             </tr>
-          );
-        })}
+          )) ?? <div>loading...</div>}
+        </tbody>
       </table>
     </div>
   );
