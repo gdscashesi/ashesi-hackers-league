@@ -1,4 +1,4 @@
-# Ashesi Hacker League
+![Ashesi Hackers League](src/media/ashesi-hacker-league-banner.jpg)
 
 Competitive series of coding challenges across data structures and algorithms, scripting ( python & bash ) and SQL.
 
