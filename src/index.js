@@ -7,7 +7,7 @@ import App from "./App";
 
 // styles
 import "scss/global.scss";
-import { ErrorBoundary } from "pages/errors/errorboundary/ErrorBoundary";
+import { ErrorBoundary } from "pages/errors/error_boundary/ErrorBoundary";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
