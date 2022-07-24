@@ -116,3 +116,14 @@ export const teamScores = [
     sql: 0,
   },
 ];
+
+export const challengesData = [
+  {
+    id: "gh67po#4",
+    order: 1,
+    algo: "an algo question",
+    scripting: "a scripting question",
+    sql: "a sql question",
+    date: "23/05/2023",
+  },
+];
