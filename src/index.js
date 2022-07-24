@@ -6,7 +6,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 
 // styles
-import "scss/index.scss";
+import "scss/global.scss";
 import { ErrorBoundary } from "pages/errors/errorboundary/ErrorBoundary";
 
 // utils
