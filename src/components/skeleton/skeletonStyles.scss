@@ -1,0 +1,35 @@
+.skeleton {
+    margin: 0.5em;
+    opacity: .7;
+    animation: skeleton-loader 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loader {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+
+    100% {
+        background-color: hsl(200, 20%, 90%);
+    }
+}
+
+.circle {
+    width: 20%;
+    border-radius: 50%;
+    background: #D2DBE2;
+    min-height: 6em;
+
+}
+
+.rectangle {
+    width: 20%;
+    min-height: 5em;
+    background: #D2DBE2;
+}
+
+.line {
+    width: 80%;
+    min-height: 40px;
+    background-color: #D2DBE2;
+}
