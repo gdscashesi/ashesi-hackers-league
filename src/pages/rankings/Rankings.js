@@ -13,7 +13,6 @@ import { headers, teamScores } from "utils/data";
 import { CHALLENGES, REGISTER } from "utils/constants";
 
 function Rankings() {
-  throw new Error();
   return (
     <div className={rankingsStyles.rankingsWrapper}>
       <div className={rankingsStyles.banner}>
