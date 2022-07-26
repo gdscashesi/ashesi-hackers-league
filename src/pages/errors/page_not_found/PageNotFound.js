@@ -4,14 +4,28 @@ import { useLocation } from "react-router-dom";
 //Styles
 import styles from "./page-not-found.module.scss";
 
+//components
+import { PageNotFoundSvg } from "./PageNotFoundSvg";
+
+//images
+import Banner  from "media/ashesi-hacker-league-banner.jpg"
+
 const PageNotFound = () => {
   const location = useLocation();
 
   return (
-    <div className={styles.notFound}>
-      <h1>
-        Sorry, looks like we don't have a {location.pathname.split("/")[1]} page{" "}
-      </h1>
+    <div className={styles.wrapper}>
+      <div className={styles.header}>
+        <h2>Ashesi Hackers League</h2>
+      </div>
+
+      <div className={styles.notFound}>
+        <PageNotFoundSvg />
+      
+      <strong>
+        sorry, looks like we don't have a {location.pathname.split("/")[1]} page{" "}
+      </strong>
+      </div>
     </div>
   );
 };
