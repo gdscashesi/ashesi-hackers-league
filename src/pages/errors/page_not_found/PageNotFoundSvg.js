@@ -6,7 +6,7 @@ export const PageNotFoundSvg = () => {
     <svg
     xmlns="http://www.w3.org/2000/svg"
     width="860.131"
-    height="571.148"
+    height="448.148"
     data-name="Layer 1"
     viewBox="0 0 860.131 571.148"
   >

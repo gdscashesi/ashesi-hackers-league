@@ -3,9 +3,8 @@
   display: flex;
   flex-flow: column;
   width: 100%;
-  height: 100%;
-
-  
+  height: 100vh;
+  overflow: hidden;
 }
 
 .header{
@@ -18,10 +17,11 @@
   >h2{
     margin-left: 2%;
     font-size:200%;
-    margin-bottom: 0.8em;
+    margin-bottom: 0.7em;
   }
 }
 .notFound {
+  position: relative;
   display: flex;
   justify-content: center;
   justify-items: center;
