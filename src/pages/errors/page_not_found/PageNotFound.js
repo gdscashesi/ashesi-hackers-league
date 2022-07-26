@@ -17,9 +17,8 @@ const PageNotFound = () => {
       </div>
 
       <div className={styles.notFound}>
-        <div className={styles.notFoundSvg}>
-          <PageNotFoundSvg />
-        </div>
+        <PageNotFoundSvg />
+        <br />
         <strong>
           sorry, looks like we don't have a {location.pathname.split("/")[1]}{" "}
           page{" "}

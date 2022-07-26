@@ -1,36 +1,22 @@
 .wrapper {
   display: flex;
   flex-flow: column;
-  width: 100%;
+  justify-content: space-between;
   height: 100vh;
+  max-width: 100vw;
   overflow: hidden;
 }
 
 .header {
-  position: absolute;
-  align-items: center;
   color: rgb(250, 249, 249);
-  top: 3.5em;
-  width: 100%;
-
-  > h2 {
-    margin-left: 2%;
-    font-size: 200%;
-    margin-bottom: 0.7em;
-  }
+  padding: 1rem;
 }
 .notFound {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 0.8rem;
   background: #ffff;
-  width: 100%;
-  height: 100%;
-  margin-top: 9rem;
+  flex-grow: 1;
+
+  display: grid;
+  place-items: center;
 
   > strong {
     text-align: center;
@@ -57,16 +43,16 @@
 }
 
 @media screen and(max-width: 768px) {
-  .notFound {
-    margin-top: 8rem;
+  // .notFound {
+  //   margin-top: 8rem;
 
-    > strong {
-      font-size: 120%;
-      z-index: 1;
-    }
+  //   > strong {
+  //     font-size: 120%;
+  //     z-index: 1;
+  //   }
 
-    .notFoundSvg {
-      position: absolute;
-    }
-  }
+  //   .notFoundSvg {
+  //     position: absolute;
+  //   }
+  // }
 }
