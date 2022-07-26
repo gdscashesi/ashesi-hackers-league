@@ -5,8 +5,7 @@ import { useLocation } from "react-router-dom";
 import styles from "./page-not-found.module.scss";
 
 //components
-import PageNotFoundSvg  from "./PageNotFoundSvg";
-
+import { PageNotFoundSvg } from "./PageNotFoundSvg";
 
 const PageNotFound = () => {
   const location = useLocation();
@@ -19,11 +18,12 @@ const PageNotFound = () => {
 
       <div className={styles.notFound}>
         <div className={styles.notFoundSvg}>
-        <PageNotFoundSvg />
+          <PageNotFoundSvg />
         </div>
-      <strong>
-        sorry, looks like we don't have a {location.pathname.split("/")[1]} page{" "}
-      </strong>
+        <strong>
+          sorry, looks like we don't have a {location.pathname.split("/")[1]}{" "}
+          page{" "}
+        </strong>
       </div>
     </div>
   );
