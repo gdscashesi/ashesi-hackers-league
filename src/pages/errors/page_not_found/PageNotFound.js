@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import styles from "./page-not-found.module.scss";
 
 //components
-import { PageNotFoundSvg } from "./PageNotFoundSvg";
+import PageNotFoundSvg  from "./PageNotFoundSvg";
 
 
 const PageNotFound = () => {

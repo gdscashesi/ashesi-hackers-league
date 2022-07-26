@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
-import styles from "./ErrorBoundary.module.css"
+
+//components
+import ErrorBoundarySvg from './ErrorBoundarySvg';
+
+//styles
+import errorBoundaryStyles from "./error-boundary.module.scss"
 
 export class ErrorBoundary extends Component {  
     constructor(props) {  
@@ -18,15 +23,20 @@ export class ErrorBoundary extends Component {
     render() {  
       if (this.state.errorInfo) {  
         return (  
-          <div className={styles.errorBoundary}>  
-            <h3>Oops! Something went wrong !!!</h3>  
-            <section>  
-                {this.state.error && this.state.error.toString()}  
-              <div>
-                {this.state.errorInfo.componentStack}  
-              </div>
-            </section>  
-          </div>  
+          <div className={errorBoundaryStyles.errorMountWrapper}>
+          <div className={errorBoundaryStyles.header}>
+            <h2>Ashesi Hackers League</h2>
+          </div>
+    
+          <div className={errorBoundaryStyles.errorMount}>
+            <div className={errorBoundaryStyles.errorMountSvg}>
+             <ErrorBoundarySvg />
+            </div>
+          <strong>
+            Oops! Something went wrong, we are fixing it
+          </strong>
+          </div>
+        </div>
         );  
       }  
       return this.props.children;  
