@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import ErrorBoundarySvg from "./ErrorBoundarySvg";
 
 //styles
-import errorBoundaryStyles from "./error-boundary.module.scss";
+import errorStyles from "../errors.module.scss";
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -23,15 +23,10 @@ class ErrorBoundary extends Component {
   render() {
     if (this.state.errorInfo) {
       return (
-        <div className={errorBoundaryStyles.errorMountWrapper}>
-          <div className={errorBoundaryStyles.header}>
-            <h2>Ashesi Hackers League</h2>
-          </div>
-
-          <div className={errorBoundaryStyles.errorMount}>
-            <div className={errorBoundaryStyles.errorMountSvg}>
-              <ErrorBoundarySvg />
-            </div>
+        <div className={errorStyles.errorWrapper}>
+          <div>
+            <ErrorBoundarySvg />
+            <br />
             <strong>Oops! Something went wrong, we are fixing it</strong>
           </div>
         </div>
