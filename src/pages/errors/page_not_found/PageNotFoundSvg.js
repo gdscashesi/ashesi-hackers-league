@@ -1,5 +1,4 @@
 import React from 'react'
-import PNFI from "media/page-not-found-svg.svg"
 
 export const PageNotFoundSvg = () => {
   return (
