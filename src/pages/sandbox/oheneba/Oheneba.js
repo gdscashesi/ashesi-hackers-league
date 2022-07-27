@@ -1,10 +1,21 @@
+import Skeleton from "components/skeleton/Skeleton";
+
 const Oheneba = () => {
-  return (
-    <div>
-      This is your playground; import this component into Sandbox.js to view
-      your temporary tests
-    </div>
-  );
+	return (
+		<div>
+			<Skeleton shape="line" />
+			<Skeleton shape="line" />
+			<Skeleton shape="line" />
+			<Skeleton shape="line" />
+			<Skeleton shape="line" />
+			<Skeleton shape="line" />
+			<Skeleton shape="line" />
+			<Skeleton shape="line" />
+			<Skeleton shape="rectangle" />
+			<Skeleton shape="rectangle" />
+			<Skeleton shape="circle" />
+		</div>
+	);
 };
 
 export default Oheneba;
