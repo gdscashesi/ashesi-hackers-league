@@ -5,4 +5,5 @@ export const RANKINGS = `${HOME}rankings`;
 export const CHALLENGES = `${HOME}challenges`;
 export const SINGLE_CHALLENGE = `${CHALLENGES}/:id`;
 export const SANDBOX = `${HOME}sandbox`;
+export const ADMIN = `${HOME}admin`;
 export const PAGE_NOT_FOUND = "*";

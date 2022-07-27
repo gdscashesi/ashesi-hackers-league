@@ -21,8 +21,11 @@ import {
   CHALLENGES,
   SINGLE_CHALLENGE,
   SANDBOX,
+  ADMIN,
   PAGE_NOT_FOUND,
 } from "utils/constants";
+import { AdminProtectedRoute } from "pages/admin/protected_routes/AdminProtectedRoute";
+import Admin from "pages/admin/Admin";
 
 function App() {
   return (
@@ -35,6 +38,9 @@ function App() {
         <Route path={CHALLENGES} element={<Challenges />} />
         <Route path={SINGLE_CHALLENGE} element={<SingleChallenge />} />
         <Route path={SANDBOX} element={<Sandbox />} />
+        <Route element = {<AdminProtectedRoute />}>
+            <Route path={ADMIN} element={<Admin />} />
+        </Route>
         <Route path={PAGE_NOT_FOUND} element={<PageNotFound />} />
       </Routes>
     </Router>
