@@ -1,6 +1,6 @@
 .skeleton {
         margin: 0.5em;
-        opacity: .2;
+        opacity: .5;
         animation: skeleton-loader 1s linear infinite alternate;
     }
     
@@ -15,25 +15,16 @@
   }
     
 .circle {
-        width: 20%;
         border-radius: 50%;
         background: #D2DBE2;
-        min-height: 3em;
         aspect-ratio: 1/1;
-        @extend .skeleton
+        @extend .skeleton;
 }
     
 .rectangle {
-        width: 20%;
-        min-height: 5em;
-        background: #D2DBE2;
-        @extend .skeleton
+        background-color: #D2DBE2;
+        border-radius: 12px;
+        @extend .skeleton;
 }
     
-.line {
-        width: 80%;
-        min-height: 40px;
-        background-color: #D2DBE2;
-        @extend .skeleton
-}
     
