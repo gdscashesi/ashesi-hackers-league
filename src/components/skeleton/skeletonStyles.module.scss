@@ -1,0 +1,30 @@
+.skeleton {
+        margin: 0.5em;
+        opacity: .5;
+        animation: skeleton-loader 1s linear infinite alternate;
+    }
+    
+    @keyframes skeleton-loader {
+        0% {
+            background-color: hsl(200, 20%, 50%);
+        }
+    
+        100% {
+            background-color: hsl(200, 20%, 90%);
+        }
+  }
+    
+.circle {
+        border-radius: 50%;
+        background: #D2DBE2;
+        aspect-ratio: 1/1;
+        @extend .skeleton;
+}
+    
+.rectangle {
+        background-color: #D2DBE2;
+        border-radius: 12px;
+        @extend .skeleton;
+}
+    
+    
