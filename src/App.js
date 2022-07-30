@@ -11,6 +11,8 @@ import Challenges from "pages/challenges/Challenges";
 import SingleChallenge from "pages/single_challenge/SingleChallenge";
 import Sandbox from "pages/sandbox/Sandbox";
 import PageNotFound from "pages/errors/page_not_found/PageNotFound";
+import { AdminProtectedRoute } from "pages/admin/protected_routes/AdminProtectedRoute";
+import Admin from "pages/admin/Admin";
 
 // utils
 import {
@@ -24,8 +26,7 @@ import {
   ADMIN,
   PAGE_NOT_FOUND,
 } from "utils/constants";
-import { AdminProtectedRoute } from "pages/admin/protected_routes/AdminProtectedRoute";
-import Admin from "pages/admin/Admin";
+
 
 function App() {
   return (
