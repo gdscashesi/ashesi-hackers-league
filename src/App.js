@@ -26,12 +26,14 @@ import {
 } from "utils/constants";
 import { AdminProtectedRoute } from "pages/admin/protected_routes/AdminProtectedRoute";
 import Admin from "pages/admin/Admin";
+import Test from "utils/test";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path={HOME} element={<Home />} />
+        <Route path="/test" element={<Test />} />
         <Route path={LOGIN} element={<Login />} />
         <Route path={REGISTER} element={<Register />} />
         <Route path={RANKINGS} element={<Rankings />} />
