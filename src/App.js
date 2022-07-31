@@ -13,6 +13,8 @@ import Sandbox from "pages/sandbox/Sandbox";
 import PageNotFound from "pages/errors/page_not_found/PageNotFound";
 import Admin from "pages/admin/Admin";
 import Team from "pages/team/Team";
+import { AdminProtectedRoute } from "pages/admin/protected_routes/AdminProtectedRoute";
+import { TeamProtectedRoute } from "pages/team/protected_routes/TeamProtectedRoute";
 
 // utils
 import {
@@ -27,8 +29,7 @@ import {
 	TEAM,
 	PAGE_NOT_FOUND,
 } from "utils/constants";
-import { AdminProtectedRoute } from "pages/admin/protected_routes/AdminProtectedRoute";
-import { TeamProtectedRoute } from "pages/team/protected_routes/TeamProtectedRoute";
+
 
 function App() {
 	return (
