@@ -2,7 +2,7 @@ export function sortTable(table, key) {
 	//check for the presence of the key in the first object of the table array
 	if (!(key in table[0]))
 		throw new Error("Table does not contain key: " + key);
-	else if (key === "name") {
+	if (key === "name") {
 		table.sort((a, b) => {
 			const current = a.name.toLowerCase(),
 				next = b.name.toLowerCase();
