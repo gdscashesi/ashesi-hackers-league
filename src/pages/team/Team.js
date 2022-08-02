@@ -16,7 +16,7 @@ const Team = () => {
 
   const handleAddHacker = (e) => {
     e.preventDefault()
-    window.prompt("Add a new hacker🔥")
+    window.prompt("Add a new hacker")
   }
 
   return (
