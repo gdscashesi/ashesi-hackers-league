@@ -1,12 +1,11 @@
 //libraries
 import { Navigate, Outlet } from "react-router-dom";
 
-export const AdminProtectedRoute = () => {
+const AdminProtectedRoute = () => {
+  //getting admin from state management, but null for now
+  const admin = true;
 
-    //getting admin from state management, but null for now
-    const admin = null;
+  return <>{admin ? <Outlet /> : <Navigate to="/" />}</>;
+};
 
-    return <>
-        {admin ? <Outlet /> : <Navigate to="/" />}
-        </>;
-  };
+export default AdminProtectedRoute;

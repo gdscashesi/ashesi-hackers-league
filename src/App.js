@@ -11,8 +11,10 @@ import Challenges from "pages/challenges/Challenges";
 import SingleChallenge from "pages/single_challenge/SingleChallenge";
 import Sandbox from "pages/sandbox/Sandbox";
 import PageNotFound from "pages/errors/page_not_found/PageNotFound";
-import { AdminProtectedRoute } from "pages/admin/protected_routes/AdminProtectedRoute";
 import Admin from "pages/admin/Admin";
+import Team from "pages/team/Team";
+import AdminProtectedRoute from "pages/admin/protected_routes/AdminProtectedRoute";
+import { TeamProtectedRoute } from "pages/team/protected_route/TeamProtectedRoute";
 
 // utils
 import {
@@ -27,8 +29,6 @@ import {
   TEAM,
   PAGE_NOT_FOUND,
 } from "utils/constants";
-import Team from "pages/team/Team";
-import { TeamProtectedRoute } from "pages/team/protected_route/TeamProtectedRoute";
 
 
 function App() {
@@ -42,9 +42,10 @@ function App() {
         <Route path={CHALLENGES} element={<Challenges />} />
         <Route path={SINGLE_CHALLENGE} element={<SingleChallenge />} />
         <Route path={SANDBOX} element={<Sandbox />} />
-        <Route element = {<AdminProtectedRoute />}>
-            <Route path={ADMIN} element={<Admin />} />
+        <Route element={<AdminProtectedRoute />}>
+          <Route path={ADMIN} element={<Admin />} />
         </Route>
+     
         <Route element = {<TeamProtectedRoute />}>
           <Route path={TEAM} element={<Team />} />
         </Route>
