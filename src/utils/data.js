@@ -6,6 +6,15 @@ export const headers = [
 	"sql",
 	"total",
 ];
+
+export const teamHeaders = [
+	"challenge",
+	"ranks",
+	"algorithms",
+	"scripting",
+	"sql",
+	"total",
+];
 export const teamScores = [
 	{
 		name: "Algo Maniacs",

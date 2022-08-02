@@ -14,7 +14,7 @@ import PageNotFound from "pages/errors/page_not_found/PageNotFound";
 import Admin from "pages/admin/Admin";
 import Team from "pages/team/Team";
 import AdminProtectedRoute from "pages/admin/protected_routes/AdminProtectedRoute";
-import TeamProtectedRoute from "pages/team/protected_routes/TeamProtectedRoute";
+import { TeamProtectedRoute } from "pages/team/protected_route/TeamProtectedRoute";
 
 // utils
 import {
@@ -30,6 +30,7 @@ import {
   PAGE_NOT_FOUND,
 } from "utils/constants";
 
+
 function App() {
   return (
     <Router>
@@ -44,7 +45,8 @@ function App() {
         <Route element={<AdminProtectedRoute />}>
           <Route path={ADMIN} element={<Admin />} />
         </Route>
-        <Route element={<TeamProtectedRoute />}>
+     
+        <Route element = {<TeamProtectedRoute />}>
           <Route path={TEAM} element={<Team />} />
         </Route>
         <Route path={PAGE_NOT_FOUND} element={<PageNotFound />} />

@@ -1,0 +1,29 @@
+.rankingsWrapper {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.banner {
+  padding: 1rem;
+  color: white;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.tableParent {
+  background-color: white;
+  flex-grow: 1;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    flex-flow: row;
+  }
+}
