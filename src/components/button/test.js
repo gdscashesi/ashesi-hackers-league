@@ -1,9 +1,9 @@
+//components
 import Button from "./Button"
 import {ReportsSvg, PublishedSvg, InsightSvg} from "./ButtonIcons"
 
+//styles
 import buttonStyle from "./button.module.scss";
-
-import React from 'react'
 
 const Test = () => {
   return (
