@@ -1,4 +1,4 @@
-const InsightSvg = () =>{
+const InsightsIcon = () =>{
     return(
         <svg 
             width="24" 
@@ -17,7 +17,7 @@ const InsightSvg = () =>{
     )
 }
 
-const ReportsSvg = () =>{
+const ReportsIcon = () =>{
     return (
         <svg 
             width="24" 
@@ -39,7 +39,7 @@ const ReportsSvg = () =>{
     )
 }
 
-const PublishedSvg = () =>{
+const PublishedIcon = () =>{
     return (
         <svg 
             width="24" 
@@ -64,4 +64,4 @@ const PublishedSvg = () =>{
     )
 }
 
-export {PublishedSvg, ReportsSvg, InsightSvg}
+export {PublishedIcon, ReportsIcon, InsightsIcon}
