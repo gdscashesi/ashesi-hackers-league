@@ -29,6 +29,7 @@ import {
   TEAM,
   PAGE_NOT_FOUND,
 } from "utils/constants";
+import Test from "components/button/test";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
         <Route element={<TeamProtectedRoute />}>
           <Route path={TEAM} element={<Team />} />
         </Route>
+        <Route path = "/test" element= {<Test />} />
         <Route path={PAGE_NOT_FOUND} element={<PageNotFound />} />
       </Routes>
     </Router>
