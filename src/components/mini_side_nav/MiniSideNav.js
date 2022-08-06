@@ -23,9 +23,9 @@ const MiniSideNav = () => {
 
 	const questionTypes = ["algorithms", "scripting", "sql"];
 	const questionTypeComponents = {
-		algorithms: AlgorithmsTextArea,
-		scripting: ScriptingTextArea,
-		sql: SqlTextArea,
+		algorithms: <AlgorithmsTextArea />,
+		scripting: <ScriptingTextArea />,
+		sql: <SqlTextArea />,
 	};
 
 	return (
@@ -39,7 +39,7 @@ const MiniSideNav = () => {
 					></Button>
 				);
 			})}
-			{questionTypeComponents[current]()}
+			{questionTypeComponents[current]}
 		</div>
 	);
 };
