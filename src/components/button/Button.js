@@ -4,10 +4,19 @@ import { Link } from "react-router-dom";
 // styles
 import buttonStyles from "./button.module.scss";
 
-const Button = ({ text, to, styles }) => {
+const Button = ({ icon, text, to, styles }) => {
   return (
-    <button className={buttonStyles.button} styles={{ ...styles }}>
-      {to ? <Link to={to}>{text}</Link> : { text }}
+    <button className={buttonStyles.button} style={{ ...styles }}>
+      {to ? (
+        <Link to={to}>
+          {icon ?? ""} {text}
+        </Link>
+      ) : (
+        <>
+          {icon ?? ""}
+          {text}
+        </>
+      )}
     </button>
   );
 };

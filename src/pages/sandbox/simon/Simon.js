@@ -1,10 +1,14 @@
+import Button from "components/button/Button";
+import { InsightsIcon, PublishedIcon } from "components/icons/Icons";
+
 const Simon = () => {
-	return (
-		<div>
-			This is your playground; import this component into Sandbox.js to
-			view your temporary tests
-		</div>
-	);
+  return (
+    <div>
+      <Button text="hello" />
+      <Button text="hello" icon={<InsightsIcon />} />
+      <Button text="hello" icon={<PublishedIcon />} to="/" />
+    </div>
+  );
 };
 
 export default Simon;

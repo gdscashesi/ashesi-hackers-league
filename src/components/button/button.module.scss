@@ -4,9 +4,17 @@
   background-color: var(--dark-blue);
   color: white;
   margin-right: 0.5rem;
-}
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 
-a {
-  color: white;
-  font-size: 108%;
+  a {
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    margin-right: 0.8rem;
+  }
 }
