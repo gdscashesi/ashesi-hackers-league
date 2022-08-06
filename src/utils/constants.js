@@ -8,3 +8,7 @@ export const SANDBOX = `${HOME}sandbox`;
 export const ADMIN = `${HOME}admin`;
 export const TEAM = `${HOME}team/:name`;
 export const PAGE_NOT_FOUND = "*";
+
+export const ALGORITHMS = "algorithms";
+export const SCRIPTING = "scripting";
+export const SQL = "sql";

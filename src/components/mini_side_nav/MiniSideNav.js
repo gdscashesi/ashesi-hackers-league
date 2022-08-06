@@ -3,45 +3,58 @@ import React, { useState } from "react";
 
 //components
 import Button from "components/button/Button";
+import {
+  AlgorithmsTextArea,
+  ScriptingTextArea,
+  SqlTextArea,
+} from "./TextAreas";
+
+// utils
+import { ALGORITHMS, SCRIPTING, SQL } from "utils/constants";
 
 const MiniSideNav = () => {
-	const [current, setCurrent] = useState("algorithms");
+  const [currentTextArea, setCurrentTextArea] = useState(ALGORITHMS);
+  const handleNavClick = (e) => setCurrentTextArea(e.target.innerText);
+  const [questionContent, setQuestionContent] = useState({
+    [ALGORITHMS]: "",
+    [SCRIPTING]: "",
+    [SQL]: "",
+  });
 
-	const handleClick = (e) => {
-		setCurrent(e.target.innerText);
-	};
+  const updateQuestionState = (questionType, content) => {
+    setQuestionContent({
+      ...questionContent,
+      [questionType]: content,
+    });
+    console.log(questionContent);
+  };
 
-	const AlgorithmsTextArea = () => {
-		return <textarea name="algorithms" placeholder="algo"></textarea>;
-	};
-	const ScriptingTextArea = () => {
-		return <textarea name="scripting" placeholder="scripting"></textarea>;
-	};
-	const SqlTextArea = () => {
-		return <textarea name="sql" placeholder="sql"></textarea>;
-	};
+  const QUESTION_TYPE_COMPONENTS = {
+    [ALGORITHMS]: (
+      <AlgorithmsTextArea
+        onChange={(e) => updateQuestionState(e.target.name, e.target.value)}
+      />
+    ),
+    [SCRIPTING]: (
+      <ScriptingTextArea
+        onChange={(e) => updateQuestionState(e.target.name, e.target.value)}
+      />
+    ),
+    [SQL]: (
+      <SqlTextArea
+        onChange={(e) => updateQuestionState(e.target.name, e.target.value)}
+      />
+    ),
+  };
 
-	const questionTypes = ["algorithms", "scripting", "sql"];
-	const questionTypeComponents = {
-		algorithms: <AlgorithmsTextArea />,
-		scripting: <ScriptingTextArea />,
-		sql: <SqlTextArea />,
-	};
-
-	return (
-		<div>
-			{questionTypes.map((category) => {
-				return (
-					<Button
-						key={category}
-						text={category}
-						onClick={handleClick}
-					></Button>
-				);
-			})}
-			{questionTypeComponents[current]}
-		</div>
-	);
+  return (
+    <div>
+      {Object.keys(QUESTION_TYPE_COMPONENTS).map((category) => (
+        <Button key={category} text={category} onClick={handleNavClick} />
+      ))}
+      {QUESTION_TYPE_COMPONENTS[currentTextArea]}
+    </div>
+  );
 };
 
 export default MiniSideNav;
