@@ -4,8 +4,6 @@ import React, { useState } from "react";
 //components
 import Button from "components/button/Button";
 
-//styles
-
 const MiniSideNav = () => {
 	const [current, setCurrent] = useState("algorithms");
 
@@ -30,11 +28,6 @@ const MiniSideNav = () => {
 		sql: SqlTextArea,
 	};
 
-	let textbox;
-	if (questionTypes.includes(current)) {
-		textbox = questionTypeComponents[current]();
-	}
-
 	return (
 		<div>
 			{questionTypes.map((category) => {
@@ -46,7 +39,7 @@ const MiniSideNav = () => {
 					></Button>
 				);
 			})}
-			{textbox}
+			{questionTypeComponents[current]()}
 		</div>
 	);
 };
