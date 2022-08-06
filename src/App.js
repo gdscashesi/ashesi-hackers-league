@@ -50,14 +50,12 @@ function App() {
         <Route path={CHALLENGES} element={<Challenges />} />
         <Route path={SINGLE_CHALLENGE} element={<SingleChallenge />} />
         <Route path={SANDBOX} element={<Sandbox />} />
-        <Route element={<AdminProtectedRoute />}>
-          <Route path={ADMIN} >
+        <Route path={ADMIN} element={<AdminProtectedRoute />}>
             <Route index element={<Admin />}/>
             <Route path={NEW} element={<New />} />
             <Route path={INSIGHTS} element={<Insights />} />
             <Route path={PUBLISHED} element={<Published />} />
             <Route path={REPORTS} element={<Reports />} />
-          </Route>
         </Route>
         <Route element={<TeamProtectedRoute />}>
           <Route path={TEAM} element={<Team />} />
