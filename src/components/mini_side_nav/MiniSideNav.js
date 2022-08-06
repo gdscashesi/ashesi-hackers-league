@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import Button from "components/button/Button";
 
 //styles
-import SideNavStyles from "./mini-sidenav.module.scss";
 
 const MiniSideNav = () => {
 	const [current, setCurrent] = useState("algorithms");
