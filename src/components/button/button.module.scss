@@ -4,26 +4,17 @@
   background-color: var(--dark-blue);
   color: white;
   margin-right: 0.5rem;
-}
-
-a {
-  color: white;
-  font-size: 108%;
-}
-
-.svgButton{
+  cursor: pointer;
   display: flex;
-  flex-flow: row;
-  justify-content:center;
   align-items: center;
-  padding: 0.8rem;
-  background-color: rgb(250, 248, 248);
-  padding-right: 0.5rem;
 
-  & a{
-    margin-left: 0.5em;
-    color: black;
-    font-size:108%;
+  a {
+    color: white;
+    display: flex;
+    align-items: center;
   }
 
+  svg {
+    margin-right: 0.8rem;
+  }
 }

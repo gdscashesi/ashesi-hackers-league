@@ -6,11 +6,18 @@ import buttonStyles from "./button.module.scss";
 
 const Button = ({ icon, text, to, styles }) => {
   return (
-    <button className={buttonStyles.button} style={{...styles}}>
-      {icon? icon:null}
-      {to ? <Link to={to}>{text}</Link> : {text}}
+    <button className={buttonStyles.button} style={{ ...styles }}>
+      {to ? (
+        <Link to={to}>
+          {icon ?? ""} {text}
+        </Link>
+      ) : (
+        <>
+          {icon ?? ""}
+          {text}
+        </>
+      )}
     </button>
-       
   );
 };
 
