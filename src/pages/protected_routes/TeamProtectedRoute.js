@@ -2,7 +2,7 @@
 import { Navigate, Outlet } from "react-router-dom";
 
 const TeamProtectedRoute = () => {
-  const team = null;
+  const team = true;
 
   return <>{team ? <Outlet /> : <Navigate to="/" />}</>;
 };

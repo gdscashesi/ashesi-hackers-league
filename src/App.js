@@ -17,8 +17,8 @@ import Insights from "pages/admin/insights/Insights";
 import Published from "pages/admin/published/Published";
 import Reports from "pages/admin/reports/Reports";
 import Team from "pages/team/Team";
-import AdminProtectedRoute from "pages/admin/protected_routes/AdminProtectedRoute";
-import TeamProtectedRoute from "pages/team/protected_routes/TeamProtectedRoute";
+import AdminProtectedRoute from "pages/protected_routes/AdminProtectedRoute";
+import TeamProtectedRoute from "pages/protected_routes/TeamProtectedRoute";
 
 // utils
 import {
@@ -38,7 +38,6 @@ import {
   REPORTS,
 } from "utils/constants";
 
-
 function App() {
   return (
     <Router>
@@ -51,11 +50,11 @@ function App() {
         <Route path={SINGLE_CHALLENGE} element={<SingleChallenge />} />
         <Route path={SANDBOX} element={<Sandbox />} />
         <Route path={ADMIN} element={<AdminProtectedRoute />}>
-            <Route index element={<Admin />}/>
-            <Route path={NEW} element={<New />} />
-            <Route path={INSIGHTS} element={<Insights />} />
-            <Route path={PUBLISHED} element={<Published />} />
-            <Route path={REPORTS} element={<Reports />} />
+          <Route index element={<Admin />} />
+          <Route path={NEW} element={<New />} />
+          <Route path={INSIGHTS} element={<Insights />} />
+          <Route path={PUBLISHED} element={<Published />} />
+          <Route path={REPORTS} element={<Reports />} />
         </Route>
         <Route element={<TeamProtectedRoute />}>
           <Route path={TEAM} element={<Team />} />
