@@ -1,7 +1,7 @@
-import MiniSideNav from "components/mini_side_nav/MiniSideNav";
+import MiniSideNav from "pages/admin/mini_side_nav/MiniSideNav";
 
 const Oheneba = () => {
-	return <MiniSideNav />;
+  return <MiniSideNav />;
 };
 
 export default Oheneba;
