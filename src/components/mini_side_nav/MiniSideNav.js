@@ -33,7 +33,7 @@ const MiniSideNav = () => {
 
 	let textbox;
 	if (questionTypes.includes(current)) {
-		textbox = questionTypeComponents[current]();
+		textbox = questionTypeComponents[current];
 	}
 
 	return (
