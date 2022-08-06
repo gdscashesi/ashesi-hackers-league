@@ -11,7 +11,13 @@ import Challenges from "pages/challenges/Challenges";
 import SingleChallenge from "pages/single_challenge/SingleChallenge";
 import Sandbox from "pages/sandbox/Sandbox";
 import PageNotFound from "pages/errors/page_not_found/PageNotFound";
+import Admin from "pages/admin/Admin";
+import New from "pages/admin/new/New";
+import Insights from "pages/admin/insights/Insights";
+import Published from "pages/admin/published/Published";
+import Reports from "pages/admin/reports/Reports";
 import Team from "pages/team/Team";
+import AdminProtectedRoute from "pages/admin/protected_routes/AdminProtectedRoute";
 import TeamProtectedRoute from "pages/team/protected_routes/TeamProtectedRoute";
 
 // utils
@@ -23,8 +29,13 @@ import {
   CHALLENGES,
   SINGLE_CHALLENGE,
   SANDBOX,
+  ADMIN,
   TEAM,
   PAGE_NOT_FOUND,
+  NEW,
+  INSIGHTS,
+  PUBLISHED,
+  REPORTS,
 } from "utils/constants";
 
 
@@ -39,6 +50,15 @@ function App() {
         <Route path={CHALLENGES} element={<Challenges />} />
         <Route path={SINGLE_CHALLENGE} element={<SingleChallenge />} />
         <Route path={SANDBOX} element={<Sandbox />} />
+        <Route element={<AdminProtectedRoute />}>
+          <Route path={ADMIN} >
+            <Route index element={<Admin />}/>
+            <Route path={NEW} element={<New />} />
+            <Route path={INSIGHTS} element={<Insights />} />
+            <Route path={PUBLISHED} element={<Published />} />
+            <Route path={REPORTS} element={<Reports />} />
+          </Route>
+        </Route>
         <Route element={<TeamProtectedRoute />}>
           <Route path={TEAM} element={<Team />} />
         </Route>
