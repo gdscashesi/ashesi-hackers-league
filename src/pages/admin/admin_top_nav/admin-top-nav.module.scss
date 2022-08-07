@@ -1,0 +1,110 @@
+.wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 100vw;
+    padding: 0.5rem 0rem;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+}
+
+.newBtn button{
+    justify-content: center;
+    background-color: #718774 !important;
+    border-radius:0 !important;
+    height:4rem !important;
+    width:15rem !important;
+    font-size: 1.5rem;
+}
+
+.navItems{
+    margin-left: auto;
+    overflow: hidden;
+    & ul{
+        display: flex;
+        padding: 0;
+    }
+    & li{
+        list-style-type: none;
+        margin: 0 1rem;
+
+        & button {
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            background-color: #ffff !important;
+            & a{
+            color:black !important;
+            font-size: 1.5rem;
+            
+            }
+        }
+    }
+}
+
+
+.toggleBtn{
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    border: 0;
+    height: 40px;
+    width: 40px;
+    padding: 0.5rem;
+    transform: translateY(-50%);
+    background-color: #ffff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.toggleBtn:hover{
+    background-color: #718774 ;
+}
+
+//media queries
+
+@media screen and (max-width: 980px){
+    button a{
+        font-size: 1rem;
+      }
+      .navItems{
+          & li > button {
+              & a{
+                  font-size: 1rem;
+              }
+          }
+      }
+
+}
+@media screen and (max-width: 768px) {
+    .navItems{
+        margin-left: auto;
+        overflow: hidden;
+        & ul{
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 60px);
+            background-color: white;
+            border-top: 1px solid black;
+            display: none;
+        }
+
+        & li{
+            text-align: center;
+            margin: 0;
+        }
+
+        :hover{
+            background-color: #eee;
+        }
+    }
+    .toggleBtn{
+        display: block;
+    }
+}
