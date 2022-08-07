@@ -5,7 +5,7 @@ import TopNavStyles from './admin-top-nav.module.scss'
 
 //Components
 import Button from 'components/button/Button'
-import { InsightsIcon, PublishedIcon, ReportsIcon, } from 'components/icons/Icons'
+import { InsightsIcon, NewIcon, PublishedIcon, ReportsIcon, ToggleIcon } from 'components/icons/Icons'
 
 //utils
 import { 
@@ -23,12 +23,13 @@ const AdminTopNav = () => {
     <nav className={TopNavStyles.wrapper}>
         <span className={TopNavStyles.newBtn}>
             <Button 
+                icon = {<NewIcon />}
                 text = "New"
                 to = {ADMIN + HOME + NEW}
             />
         </span>
         <button className={TopNavStyles.toggleBtn}>
-            {/* <ToggleIcon /> */}
+            <ToggleIcon />
         </button>
         <div className={TopNavStyles.navItems}>
             <ul>
