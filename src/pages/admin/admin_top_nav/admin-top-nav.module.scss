@@ -44,24 +44,26 @@
     }
 }
 
-
+//toggle button styles
 .toggleBtn{
     display: none;
     position: absolute;
     top: 50%;
-    right: 25px;
+    right: 1.5rem;
     border: 0;
-    height: 40px;
-    width: 40px;
+    height: 2.5rem;
+    width: 2.5rem;
     padding: 0.5rem;
     transform: translateY(-50%);
     background-color: #ffff;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
+
 }
 
 .toggleBtn:hover{
-    background-color: #718774 ;
+    background-color: #717c8713 ;
+    border: 2px solid  #717c8713;
 }
 
 //media queries
@@ -90,7 +92,7 @@
             top: 60px;
             left: 0;
             width: 100%;
-            height: calc(100vh - 60px);
+            height: calc(100vh - 3.75rem);
             background-color: white;
             border-top: 1px solid black;
             display: none;
@@ -108,4 +110,5 @@
     .toggleBtn{
         display: block;
     }
+
 }

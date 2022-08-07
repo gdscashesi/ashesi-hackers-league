@@ -19,6 +19,7 @@ import {
 
 
 const AdminTopNav = () => {
+    
   return (
     <nav className={TopNavStyles.wrapper}>
         <span className={TopNavStyles.newBtn}>
@@ -28,10 +29,10 @@ const AdminTopNav = () => {
                 to = {ADMIN + HOME + NEW}
             />
         </span>
-        <button className={TopNavStyles.toggleBtn}>
+        <button className={TopNavStyles.toggleBtn} >
             <ToggleIcon />
         </button>
-        <div className={TopNavStyles.navItems}>
+        <div className={TopNavStyles.navItems }>
             <ul>
                 <li>
                     <Button 
