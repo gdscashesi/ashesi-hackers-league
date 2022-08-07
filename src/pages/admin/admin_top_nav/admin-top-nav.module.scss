@@ -22,93 +22,19 @@
 .navItems{
     margin-left: auto;
     overflow: hidden;
-    & ul{
-        display: flex;
-        padding: 0;
-    }
-    & li{
-        list-style-type: none;
-        margin: 0 1rem;
+    display: flex;
+    padding: 0;
 
-        & button {
-            text-decoration: none;
-            display: block;
-            width: 100%;
-            background-color: #ffff !important;
-            & a{
+    & button {
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        background-color: #ffff !important;
+        & a{
+            list-style-type: none;
             color:black !important;
             font-size: 1.5rem;
-            
-            }
+            margin: 0 3.5rem;
         }
     }
-}
-
-//toggle button styles
-.toggleBtn{
-    display: none;
-    position: absolute;
-    top: 50%;
-    right: 1.5rem;
-    border: 0;
-    height: 2.5rem;
-    width: 2.5rem;
-    padding: 0.5rem;
-    transform: translateY(-50%);
-    background-color: #ffff;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-
-}
-
-.toggleBtn:hover{
-    background-color: #717c8713 ;
-    border: 2px solid  #717c8713;
-}
-
-//media queries
-
-@media screen and (max-width: 980px){
-    button a{
-        font-size: 1rem;
-      }
-      .navItems{
-          & li > button {
-              & a{
-                  font-size: 1rem;
-              }
-          }
-      }
-
-}
-
-@media screen and (max-width: 768px) {
-    .navItems{
-        margin-left: auto;
-        overflow: hidden;
-        & ul{
-            flex-direction: column;
-            position: absolute;
-            top: 60px;
-            left: 0;
-            width: 100%;
-            height: calc(100vh - 3.75rem);
-            background-color: white;
-            border-top: 1px solid black;
-            display: none;
-        }
-
-        & li{
-            text-align: center;
-            margin: 0;
-        }
-
-        :hover{
-            background-color: #eee;
-        }
-    }
-    .toggleBtn{
-        display: block;
-    }
-
 }

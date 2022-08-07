@@ -33,37 +33,26 @@ const AdminTopNav = () => {
             <ToggleIcon />
         </button>
         <div className={TopNavStyles.navItems }>
-            <ul>
-                <li>
-                    <Button 
-                        icon = {<InsightsIcon />}
-                        text="insights" 
-                        to={ADMIN + HOME + INSIGHTS}
-                    />
-                </li>
-                <li>
-                    <Button 
-                        icon = {<ReportsIcon />}
-                        text="reports" 
-                        to={ADMIN + HOME + REPORTS}
-                    />
-                </li>
-                <li>
-                    <Button 
-                        icon = {<PublishedIcon />}
-                        text="published" 
-                        to={ADMIN + HOME + PUBLISHED}
-                    />               
-                </li>
-                <li>
-                    <Button 
-                        icon = {<PublishedIcon />}
-                        text="extra" 
-                        to={ADMIN + HOME + PUBLISHED}
-                    />
-                    
-                </li>
-            </ul>
+            <Button 
+                icon = {<InsightsIcon />}
+                text="insights" 
+                to={ADMIN + HOME + INSIGHTS}
+            />
+            <Button 
+                icon = {<ReportsIcon />}
+                text="reports" 
+                to={ADMIN + HOME + REPORTS}
+            />
+            <Button 
+                icon = {<PublishedIcon />}
+                text="published" 
+                to={ADMIN + HOME + PUBLISHED}
+            />               
+            <Button 
+                icon = {<PublishedIcon />}
+                text="extra" 
+                to={ADMIN + HOME + PUBLISHED}
+            />
         </div>
     </nav>
   )
