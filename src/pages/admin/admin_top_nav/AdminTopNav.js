@@ -25,7 +25,7 @@ const AdminTopNav = () => {
         <span className={TopNavStyles.newBtn}>
             <Button 
                 icon = {<NewIcon />}
-                text = "New"
+                text = {NEW}
                 to = {ADMIN + HOME + NEW}
             />
         </span>
@@ -35,17 +35,17 @@ const AdminTopNav = () => {
         <div className={TopNavStyles.navItems }>
             <Button 
                 icon = {<InsightsIcon />}
-                text="insights" 
+                text={INSIGHTS} 
                 to={ADMIN + HOME + INSIGHTS}
             />
             <Button 
                 icon = {<ReportsIcon />}
-                text="reports" 
+                text={REPORTS}
                 to={ADMIN + HOME + REPORTS}
             />
             <Button 
                 icon = {<PublishedIcon />}
-                text="published" 
+                text={PUBLISHED}
                 to={ADMIN + HOME + PUBLISHED}
             />               
             <Button 
