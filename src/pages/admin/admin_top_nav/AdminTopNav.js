@@ -14,7 +14,8 @@ import {
     INSIGHTS,
     PUBLISHED,
     REPORTS,
-    NEW
+    NEW,
+    EXTRA
 } from "utils/constants"
 
 
@@ -50,8 +51,8 @@ const AdminTopNav = () => {
             />               
             <Button 
                 icon = {<PublishedIcon />}
-                text="extra" 
-                to={ADMIN + HOME + PUBLISHED}
+                text={EXTRA} 
+                to={ADMIN + HOME + EXTRA}
             />
         </div>
     </nav>
