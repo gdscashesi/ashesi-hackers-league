@@ -36,7 +36,9 @@ import {
   INSIGHTS,
   PUBLISHED,
   REPORTS,
+  EXTRA,
 } from "utils/constants";
+import Extra from "pages/admin/extra/Extra";
 
 function App() {
   return (
@@ -55,6 +57,7 @@ function App() {
           <Route path={INSIGHTS} element={<Insights />} />
           <Route path={PUBLISHED} element={<Published />} />
           <Route path={REPORTS} element={<Reports />} />
+          <Route path={EXTRA} element={<Extra />} />
         </Route>
         <Route element={<TeamProtectedRoute />}>
           <Route path={TEAM} element={<Team />} />

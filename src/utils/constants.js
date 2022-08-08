@@ -10,6 +10,7 @@ export const NEW = "new";
 export const INSIGHTS = "insights";
 export const PUBLISHED = "published";
 export const REPORTS = "reports";
+export const EXTRA = "extra";
 export const TEAM = `${HOME}team/:name`;
 export const PAGE_NOT_FOUND = "*";
 
