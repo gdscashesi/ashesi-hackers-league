@@ -1,5 +1,5 @@
 //libraries
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 //components
 import Button from "components/button/Button";
@@ -20,6 +20,15 @@ const MiniSideNav = () => {
 		[SCRIPTING]: "",
 		[SQL]: "",
 	});
+
+	useEffect(() => {
+		const savedQuestions = JSON.parse(
+			localStorage.getItem("questionContent")
+		);
+		if (savedQuestions) {
+			setQuestionContent(savedQuestions);
+		}
+	}, []);
 
 	const updateQuestionState = (questionType, content) => {
 		setQuestionContent({
@@ -42,6 +51,7 @@ const MiniSideNav = () => {
 				onChange={(e) =>
 					updateQuestionState(e.target.name, e.target.value)
 				}
+				value={questionContent[ALGORITHMS]}
 			/>
 		),
 		[SCRIPTING]: (
@@ -49,6 +59,7 @@ const MiniSideNav = () => {
 				onChange={(e) =>
 					updateQuestionState(e.target.name, e.target.value)
 				}
+				value={questionContent[SCRIPTING]}
 			/>
 		),
 		[SQL]: (
@@ -56,6 +67,7 @@ const MiniSideNav = () => {
 				onChange={(e) =>
 					updateQuestionState(e.target.name, e.target.value)
 				}
+				value={questionContent[SQL]}
 			/>
 		),
 	};
