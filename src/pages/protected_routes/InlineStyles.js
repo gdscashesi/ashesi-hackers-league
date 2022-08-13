@@ -14,6 +14,8 @@ export const outletWrapperStyle = {
 export const adminWrapperStyle = {
   display: "flex",
   flexDirection: "row",
+  height: "100vh",
+  overflow: "hidden",
 };
 export const bannerOutletWrapperStyle = {
   display: "flex",

@@ -1,8 +1,9 @@
-.button {
-  color: blue;
-}
-
 .wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100%;
+
   button {
     color: var(--gradient-blue);
     background-color: var(--light-blue);
@@ -16,10 +17,12 @@
   }
 
   textarea {
-    padding: 1rem;
+    padding: 2rem;
     outline: none;
     border: none;
     border-left: 0.1rem solid #f2f2f2;
+    transition: border-color 0.7s linear;
+    font-family: var(--app-font-primary);
 
     &:focus {
       border-color: var(--gradient-blue);
