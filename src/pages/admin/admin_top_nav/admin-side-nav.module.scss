@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  height: 100vw;
+  width: 25vw;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: relative;
+
+  button {
+    width: 100%;
+    border-radius: 0;
+    background-color: white;
+
+    a {
+      color: #a1a1a1;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}

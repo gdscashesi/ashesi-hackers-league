@@ -1,3 +1,28 @@
-.hide {
-    display: none;
+.button {
+  color: blue;
+}
+
+.wrapper {
+  button {
+    color: var(--gradient-blue);
+    background-color: var(--light-blue);
+    border-radius: 5rem;
+    width: 7rem;
+
+    &:hover {
+      background-color: var(--gradient-blue);
+      color: white;
+    }
+  }
+
+  textarea {
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-left: 0.1rem solid #f2f2f2;
+
+    &:focus {
+      border-color: var(--gradient-blue);
+    }
+  }
 }
