@@ -3,12 +3,14 @@
   flex-flow: column;
   justify-content: space-between;
   height: 100%;
+  padding: 0 1rem;
 
   button {
     color: var(--gradient-blue);
     background-color: var(--light-blue);
-    border-radius: 5rem;
-    width: 7rem;
+    border-radius: 2rem;
+    width: 8rem;
+    font-size: 1.2rem;
 
     &:hover {
       background-color: var(--gradient-blue);
@@ -20,12 +22,37 @@
     padding: 2rem;
     outline: none;
     border: none;
-    border-left: 0.1rem solid #f2f2f2;
+    border-left: 0.2rem solid #f0f0f0;
     transition: border-color 0.7s linear;
     font-family: var(--app-font-primary);
+    flex-grow: 1;
 
     &:focus {
       border-color: var(--gradient-blue);
+    }
+  }
+}
+
+.questionButtons {
+  padding: 1rem 0;
+}
+
+.savePublishButtonsWrapper {
+  padding: 1rem 0;
+  align-self: end;
+
+  button {
+    border-radius: 0.3rem;
+    //save
+    &:first-child {
+      color: var(--gradient-blue);
+      background-color: transparent;
+    }
+
+    //publish
+    &:last-child {
+      color: white;
+      background-color: var(--gradient-blue);
     }
   }
 }

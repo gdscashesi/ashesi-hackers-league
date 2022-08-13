@@ -13,7 +13,7 @@ import {
 import styles from "./new.module.scss";
 
 // utils
-import { ALGORITHMS, SCRIPTING, SQL, SAVE } from "utils/constants";
+import { ALGORITHMS, SCRIPTING, SQL, SAVE, PUBLISH } from "utils/constants";
 
 const New = () => {
   const [currentTextArea, setCurrentTextArea] = useState(ALGORITHMS);
@@ -67,16 +67,17 @@ const New = () => {
 
   return (
     <div className={styles.wrapper}>
-      <div>
+      <div className={styles.questionButtons}>
         {Object.keys(QUESTION_TYPE_COMPONENTS).map((category) => (
           <Button key={category} text={category} onClick={handleNavClick} />
         ))}
       </div>
 
-      <div>{QUESTION_TYPE_COMPONENTS[currentTextArea]}</div>
+      {QUESTION_TYPE_COMPONENTS[currentTextArea]}
 
-      <div>
+      <div className={styles.savePublishButtonsWrapper}>
         <Button text={SAVE} onClick={storeQuestionContent} />
+        <Button text={PUBLISH} />
       </div>
     </div>
   );
