@@ -389,3 +389,46 @@ export const SampleModel3 = {
         }
     ]
 }
+
+export const SampleModel4 = {
+    season:"fall22",
+    weeks:[
+        {
+            weekId:"1",
+            questions:{
+                sql:"",
+                scripting:"",
+                algo:""
+            }
+        },
+
+        {
+            weekId:"2",
+            questions:{
+                sql:"",
+                scripting:"",
+                algo:""
+            }
+        },
+
+        {
+            weekId:"3",
+            questions:{
+                sql:"",
+                scripting:"",
+                algo:""
+            }
+        },
+
+        {
+            weekId:"4",
+            questions:{
+                sql:"",
+                scripting:"",
+                algo:""
+            }
+        },
+    ]
+}
+        
+            
