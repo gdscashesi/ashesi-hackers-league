@@ -17,3 +17,5 @@ export const PAGE_NOT_FOUND = "*";
 export const ALGORITHMS = "algorithms";
 export const SCRIPTING = "scripting";
 export const SQL = "sql";
+export const SAVE = "save";
+export const PUBLISH = "publish";

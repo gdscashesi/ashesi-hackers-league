@@ -1,20 +1,24 @@
 .button {
-  padding: 0.8rem;
   border-radius: 0.25rem;
   background-color: var(--dark-blue);
   color: white;
   margin-right: 0.5rem;
   cursor: pointer;
-  display: flex;
-  align-items: center;
+  text-align: center;
 
   a {
     color: white;
     display: flex;
     align-items: center;
+    padding: 1rem;
+    width: 100%;
   }
 
   svg {
     margin-right: 0.8rem;
   }
+}
+
+.padding {
+  padding: 1rem;
 }
