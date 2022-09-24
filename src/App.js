@@ -19,6 +19,7 @@ import Reports from "pages/admin/reports/Reports";
 import Team from "pages/team/Team";
 import AdminProtectedRoute from "pages/protected_routes/AdminProtectedRoute";
 import TeamProtectedRoute from "pages/protected_routes/TeamProtectedRoute";
+import Extra from "pages/admin/extra/Extra";
 
 // utils
 import {
@@ -38,14 +39,13 @@ import {
   REPORTS,
   EXTRA,
 } from "utils/constants";
-import Extra from "pages/admin/extra/Extra";
 
 // contexts
-import { RankingsProvider } from "contexts/RankingsContext";
+import { AppProvider } from "contexts/AppContext";
 
 function App() {
   return (
-    <RankingsProvider>
+    <AppProvider>
       <Router>
         <Routes>
           <Route path={HOME} element={<Home />} />
@@ -69,7 +69,7 @@ function App() {
           <Route path={PAGE_NOT_FOUND} element={<PageNotFound />} />
         </Routes>
       </Router>
-    </RankingsProvider>
+    </AppProvider>
   );
 }
 

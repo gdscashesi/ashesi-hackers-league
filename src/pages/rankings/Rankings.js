@@ -5,7 +5,7 @@ import React, { useContext } from "react";
 import Table from "./table/Table";
 import Button from "components/button/Button";
 
-import RankingsContext from "contexts/RankingsContext";
+import RankingsContext from "contexts/AppContext";
 
 // styles
 import rankingsStyles from "./rankings.module.scss";

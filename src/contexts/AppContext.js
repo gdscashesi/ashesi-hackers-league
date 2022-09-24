@@ -5,9 +5,9 @@ import { createContext, useState } from "react";
 import { headers, teamScores } from "utils/data";
 import { sortTable } from "utils/functions";
 
-const RankingsContext = createContext();
+const AppContext = createContext();
 
-export function RankingsProvider({ children }) {
+export function AppProvider({ children }) {
   const [scores, setScores] = useState(teamScores);
   console.log(scores);
 
@@ -16,10 +16,10 @@ export function RankingsProvider({ children }) {
   };
 
   return (
-    <RankingsContext.Provider value={{ headers, scores, sortScores }}>
+    <AppContext.Provider value={{ headers, scores, sortScores }}>
       {children}
-    </RankingsContext.Provider>
+    </AppContext.Provider>
   );
 }
 
-export default RankingsContext;
+export default AppContext;
