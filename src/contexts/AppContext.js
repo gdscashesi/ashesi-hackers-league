@@ -7,12 +7,19 @@ import { sortTable } from "utils/functions";
 
 const AppContext = createContext();
 
+/**
+ * TODO : pre-fetch table data
+ * TODO : pre-fetch current season's data (all its questions)
+ * TODO : set team names to empty array
+ * TODO : Dynamically upate the context with post-fetched data
+ */
+
 export function AppProvider({ children }) {
   const [scores, setScores] = useState(teamScores);
   console.log(scores);
 
   const sortScores = (key) => {
-    setScores([...sortTable(teamScores, key)]);
+    setScores(sortTable(teamScores, key));
   };
 
   return (
