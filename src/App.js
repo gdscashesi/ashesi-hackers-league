@@ -40,31 +40,36 @@ import {
 } from "utils/constants";
 import Extra from "pages/admin/extra/Extra";
 
+// contexts
+import { RankingsProvider } from "contexts/RankingsContext";
+
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path={HOME} element={<Home />} />
-        <Route path={LOGIN} element={<Login />} />
-        <Route path={REGISTER} element={<Register />} />
-        <Route path={RANKINGS} element={<Rankings />} />
-        <Route path={CHALLENGES} element={<Challenges />} />
-        <Route path={SINGLE_CHALLENGE} element={<SingleChallenge />} />
-        <Route path={SANDBOX} element={<Sandbox />} />
-        <Route path={ADMIN} element={<AdminProtectedRoute />}>
-          <Route index element={<Admin />} />
-          <Route path={NEW} element={<New />} />
-          <Route path={INSIGHTS} element={<Insights />} />
-          <Route path={PUBLISHED} element={<Published />} />
-          <Route path={REPORTS} element={<Reports />} />
-          <Route path={EXTRA} element={<Extra />} />
-        </Route>
-        <Route element={<TeamProtectedRoute />}>
-          <Route path={TEAM} element={<Team />} />
-        </Route>
-        <Route path={PAGE_NOT_FOUND} element={<PageNotFound />} />
-      </Routes>
-    </Router>
+    <RankingsProvider>
+      <Router>
+        <Routes>
+          <Route path={HOME} element={<Home />} />
+          <Route path={LOGIN} element={<Login />} />
+          <Route path={REGISTER} element={<Register />} />
+          <Route path={RANKINGS} element={<Rankings />} />
+          <Route path={CHALLENGES} element={<Challenges />} />
+          <Route path={SINGLE_CHALLENGE} element={<SingleChallenge />} />
+          <Route path={SANDBOX} element={<Sandbox />} />
+          <Route path={ADMIN} element={<AdminProtectedRoute />}>
+            <Route index element={<Admin />} />
+            <Route path={NEW} element={<New />} />
+            <Route path={INSIGHTS} element={<Insights />} />
+            <Route path={PUBLISHED} element={<Published />} />
+            <Route path={REPORTS} element={<Reports />} />
+            <Route path={EXTRA} element={<Extra />} />
+          </Route>
+          <Route element={<TeamProtectedRoute />}>
+            <Route path={TEAM} element={<Team />} />
+          </Route>
+          <Route path={PAGE_NOT_FOUND} element={<PageNotFound />} />
+        </Routes>
+      </Router>
+    </RankingsProvider>
   );
 }
 
