@@ -7,10 +7,13 @@
  *  @return Array <Objects>
  */
 export function sortTable(table, key) {
-  if (!(key in table[0])) throw new Error("Table does not contain key: " + key);
+  const table_ = [...table];
+
+  if (!(key in table_[0]))
+    throw new Error("Table does not contain key: " + key);
 
   if (key === "name") {
-    table.sort((a, b) => {
+    table_.sort((a, b) => {
       const current = a.name.toLowerCase();
       const next = b.name.toLowerCase();
 
@@ -20,9 +23,9 @@ export function sortTable(table, key) {
     });
   }
 
-  table.sort((a, b) => b[key] - a[key]);
+  table_.sort((a, b) => b[key] - a[key]);
 
-  return table;
+  return table_;
 }
 
 /**

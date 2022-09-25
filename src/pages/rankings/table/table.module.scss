@@ -7,6 +7,10 @@
 th {
   padding: 1rem;
   color: var(--gradient-blue);
+
+  &:hover {
+    background-color: var(--light-blue);
+  }
 }
 
 td {

@@ -2,14 +2,22 @@ import React from "react";
 
 import tableStyles from "./table.module.scss";
 
-const Table = ({ headers, body }) => {
+const Table = ({ headers, body, sortScores }) => {
   return (
     <div className={tableStyles.tableWrapper}>
       <table cellSpacing="0">
         <thead>
           <tr>
             {headers?.map((headName, index) => {
-              return <th key={index}>{headName}</th>;
+              return (
+                <th
+                  title="sort"
+                  onClick={() => sortScores(headName.toLowerCase())}
+                  key={index}
+                >
+                  {headName}
+                </th>
+              );
             }) ?? <div>loading...</div>}
           </tr>
         </thead>
