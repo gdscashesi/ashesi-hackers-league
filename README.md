@@ -8,15 +8,17 @@ Competitive series of coding challenges across data structures and algorithms, s
 
 ## Live
 
-...not yet
+[Ashesi Hackers League](https://ashesi-hackers-league.web.app/)
 
 ## Technologies
 
-React & Firebase
+- React
+- Firebase
+- Docker
 
 ## Sneak Peek
 
-...not yet
+![Demo](misc/demo.gif)
 
 ## Made with ❤️ by
 
