@@ -1,18 +1,21 @@
 // libraries
-import React from "react";
+import React, { useContext } from "react";
 
 // components
 import Table from "./table/Table";
 import Button from "components/button/Button";
 
+import RankingsContext from "contexts/AppContext";
+
 // styles
 import rankingsStyles from "./rankings.module.scss";
 
 // utils
-import { headers, teamScores } from "utils/data";
 import { CHALLENGES, REGISTER } from "utils/constants";
 
 function Rankings() {
+  const { headers, scores, sortScores } = useContext(RankingsContext);
+
   return (
     <div className={rankingsStyles.rankingsWrapper}>
       <div className={rankingsStyles.banner}>
@@ -25,7 +28,7 @@ function Rankings() {
       </div>
 
       <div className={rankingsStyles.tableParent}>
-        <Table headers={headers} body={teamScores} />
+        <Table headers={headers} body={scores} sortScores={sortScores} />
       </div>
     </div>
   );
