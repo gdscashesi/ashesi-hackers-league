@@ -5,7 +5,7 @@ import React, { useContext } from "react";
 import Table from "./table/Table";
 import Button from "components/button/Button";
 
-import RankingsContext from "contexts/AppContext";
+import { AppContext } from "contexts/AppContext";
 
 // styles
 import rankingsStyles from "./rankings.module.scss";
@@ -14,7 +14,7 @@ import rankingsStyles from "./rankings.module.scss";
 import { CHALLENGES, REGISTER } from "utils/constants";
 
 function Rankings() {
-  const { headers, scores, sortScores } = useContext(RankingsContext);
+  const { headers, scores, sortScores } = useContext(AppContext);
 
   return (
     <div className={rankingsStyles.rankingsWrapper}>

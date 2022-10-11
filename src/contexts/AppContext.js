@@ -5,7 +5,7 @@ import { createContext, useState } from "react";
 import { headers, teamScores } from "utils/data";
 import { sortTable } from "utils/functions";
 
-const AppContext = createContext();
+export const AppContext = createContext();
 
 /**
  * TODO : pre-fetch table data
@@ -14,7 +14,7 @@ const AppContext = createContext();
  * TODO : Dynamically upate the context with post-fetched data
  */
 
-export function AppContextProvider({ children }) {
+function AppContextProvider({ children }) {
   const [scores, setScores] = useState(teamScores);
   // console.log(scores);
 
@@ -29,4 +29,4 @@ export function AppContextProvider({ children }) {
   );
 }
 
-export default AppContext;
+export default AppContextProvider;

@@ -41,25 +41,12 @@ import {
 } from "utils/constants";
 
 // contexts
-import { AppContextProvider } from "contexts/AppContext";
-import { AdminContextProvider } from "contexts/AdminContext";
+import AppContextProvider from "contexts/AppContext";
 
 function App() {
   return (
     <AppContextProvider>
       <Router>
-        <AdminContextProvider>
-          <Routes>
-            <Route path={ADMIN} element={<AdminProtectedRoute />}>
-              <Route index element={<Admin />} />
-              <Route path={NEW} element={<New />} />
-              <Route path={INSIGHTS} element={<Insights />} />
-              <Route path={PUBLISHED} element={<Published />} />
-              <Route path={REPORTS} element={<Reports />} />
-              <Route path={EXTRA} element={<Extra />} />
-            </Route>
-          </Routes>
-        </AdminContextProvider>
         <Routes>
           <Route path={HOME} element={<Home />} />
           <Route path={LOGIN} element={<Login />} />
@@ -70,6 +57,14 @@ function App() {
           <Route path={SANDBOX} element={<Sandbox />} />
           <Route element={<TeamProtectedRoute />}>
             <Route path={TEAM} element={<Team />} />
+          </Route>
+          <Route path={ADMIN} element={<AdminProtectedRoute />}>
+            <Route index element={<Admin />} />
+            <Route path={NEW} element={<New />} />
+            <Route path={INSIGHTS} element={<Insights />} />
+            <Route path={PUBLISHED} element={<Published />} />
+            <Route path={REPORTS} element={<Reports />} />
+            <Route path={EXTRA} element={<Extra />} />
           </Route>
           <Route path={PAGE_NOT_FOUND} element={<PageNotFound />} />
         </Routes>
