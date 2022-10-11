@@ -8,11 +8,13 @@
  */
 export function sortTable(table, key) {
   const table_ = [...table];
+  const NAME = "name",
+    TOTAL = "total";
 
-  if (!(key in table_[0]) && key !== "total")
+  if (!(key in table_[0]) && key !== TOTAL)
     throw new Error("Table does not contain key: " + key);
 
-  if (key === "name") {
+  if (key === NAME) {
     table_.sort((a, b) => {
       const current = a.name.toLowerCase();
       const next = b.name.toLowerCase();
@@ -23,8 +25,14 @@ export function sortTable(table, key) {
     });
   }
 
-  if(key === "total"){
-    return table_.sort((a, b) => (b["algorithms"]+ b["scripting"] + b["sql"]) - (a["algorithms"]+ a["scripting"] + a["sql"]))
+  if (key === TOTAL) {
+    return table_.sort(
+      (a, b) =>
+        b["algorithms"] +
+        b["scripting"] +
+        b["sql"] -
+        (a["algorithms"] + a["scripting"] + a["sql"])
+    );
   }
 
   table_.sort((a, b) => b[key] - a[key]);
@@ -50,14 +58,13 @@ export function getOrdinal(number) {
   else return number + "th";
 }
 
-
 /**
  * It returns a string that is either "spring" or "fall" followed by the current year.
  * @returns A string.
  */
-export function getCurrentSeason(){
+export function getCurrentSeason() {
   const date = new Date();
   if (date.getMonth() <= 7) return "spring" + date.getFullYear();
-  if (date.getMonth() >= 8 && date.getMonth() <=11) return "fall" + date.getFullYear();
-
+  if (date.getMonth() >= 8 && date.getMonth() <= 11)
+    return "fall" + date.getFullYear();
 }
