@@ -48,6 +48,18 @@ function App() {
   return (
     <AppProvider>
       <Router>
+        <AdminContextProvider>
+          <Routes>
+              <Route path={ADMIN} element={<AdminProtectedRoute />}>
+                <Route index element={<Admin />} />
+                <Route path={NEW} element={<New />} />
+                <Route path={INSIGHTS} element={<Insights />} />
+                <Route path={PUBLISHED} element={<Published />} />
+                <Route path={REPORTS} element={<Reports />} />
+                <Route path={EXTRA} element={<Extra />} />
+              </Route>
+          </Routes>
+        </AdminContextProvider>
         <Routes>
           <Route path={HOME} element={<Home />} />
           <Route path={LOGIN} element={<Login />} />
@@ -56,16 +68,6 @@ function App() {
           <Route path={CHALLENGES} element={<Challenges />} />
           <Route path={SINGLE_CHALLENGE} element={<SingleChallenge />} />
           <Route path={SANDBOX} element={<Sandbox />} />
-          <AdminContextProvider>
-            <Route path={ADMIN} element={<AdminProtectedRoute />}>
-              <Route index element={<Admin />} />
-              <Route path={NEW} element={<New />} />
-              <Route path={INSIGHTS} element={<Insights />} />
-              <Route path={PUBLISHED} element={<Published />} />
-              <Route path={REPORTS} element={<Reports />} />
-              <Route path={EXTRA} element={<Extra />} />
-            </Route>
-          </AdminContextProvider>
           <Route element={<TeamProtectedRoute />}>
             <Route path={TEAM} element={<Team />} />
           </Route>
