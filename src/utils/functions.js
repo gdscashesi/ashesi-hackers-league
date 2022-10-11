@@ -9,7 +9,7 @@
 export function sortTable(table, key) {
   const table_ = [...table];
 
-  if (!(key in table_[0]))
+  if (!(key in table_[0]) && key !== "total")
     throw new Error("Table does not contain key: " + key);
 
   if (key === "name") {
@@ -21,6 +21,10 @@ export function sortTable(table, key) {
       else if (current > next) return 1;
       else return 0;
     });
+  }
+
+  if(key === "total"){
+    return table_.sort((a, b) => (b["algorithms"]+ b["scripting"] + b["sql"]) - (a["algorithms"]+ a["scripting"] + a["sql"]))
   }
 
   table_.sort((a, b) => b[key] - a[key]);
