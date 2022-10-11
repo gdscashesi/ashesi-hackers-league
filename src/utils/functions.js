@@ -53,7 +53,7 @@ export function getOrdinal(number) {
  */
 export function getCurrentSeason(){
   const date = new Date();
-  if (date.getMonth() <= 4) return "spring" + date.getFullYear();
+  if (date.getMonth() <= 7) return "spring" + date.getFullYear();
   if (date.getMonth() >= 8 && date.getMonth() <=11) return "fall" + date.getFullYear();
 
 }
