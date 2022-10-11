@@ -45,3 +45,15 @@ export function getOrdinal(number) {
   else if (ones === 3 && tens !== 13) return number + "rd";
   else return number + "th";
 }
+
+
+/**
+ * It returns a string that is either "spring" or "fall" followed by the current year.
+ * @returns A string.
+ */
+export function getCurrentSeason(){
+  const date = new Date();
+  if (date.getMonth() <= 4) return "spring" + date.getFullYear();
+  if (date.getMonth() >= 8 && date.getMonth() <=11) return "fall" + date.getFullYear();
+
+}
