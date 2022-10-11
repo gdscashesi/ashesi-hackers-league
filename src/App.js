@@ -41,23 +41,23 @@ import {
 } from "utils/constants";
 
 // contexts
-import { AppProvider } from "contexts/AppContext";
-import AdminContextProvider from "contexts/AdminContext";
+import { AppContextProvider } from "contexts/AppContext";
+import { AdminContextProvider } from "contexts/AdminContext";
 
 function App() {
   return (
-    <AppProvider>
+    <AppContextProvider>
       <Router>
         <AdminContextProvider>
           <Routes>
-              <Route path={ADMIN} element={<AdminProtectedRoute />}>
-                <Route index element={<Admin />} />
-                <Route path={NEW} element={<New />} />
-                <Route path={INSIGHTS} element={<Insights />} />
-                <Route path={PUBLISHED} element={<Published />} />
-                <Route path={REPORTS} element={<Reports />} />
-                <Route path={EXTRA} element={<Extra />} />
-              </Route>
+            <Route path={ADMIN} element={<AdminProtectedRoute />}>
+              <Route index element={<Admin />} />
+              <Route path={NEW} element={<New />} />
+              <Route path={INSIGHTS} element={<Insights />} />
+              <Route path={PUBLISHED} element={<Published />} />
+              <Route path={REPORTS} element={<Reports />} />
+              <Route path={EXTRA} element={<Extra />} />
+            </Route>
           </Routes>
         </AdminContextProvider>
         <Routes>
@@ -74,7 +74,7 @@ function App() {
           <Route path={PAGE_NOT_FOUND} element={<PageNotFound />} />
         </Routes>
       </Router>
-    </AppProvider>
+    </AppContextProvider>
   );
 }
 
