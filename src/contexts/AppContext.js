@@ -14,9 +14,9 @@ const AppContext = createContext();
  * TODO : Dynamically upate the context with post-fetched data
  */
 
-export function AppProvider({ children }) {
+export function AppContextProvider({ children }) {
   const [scores, setScores] = useState(teamScores);
-  console.log(scores);
+  // console.log(scores);
 
   const sortScores = (key) => {
     setScores(sortTable(teamScores, key));
