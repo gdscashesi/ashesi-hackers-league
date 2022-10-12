@@ -1,0 +1,132 @@
+{
+    "admin":[
+        {
+            "id":1,
+            "name":"Jack",
+            "token":"thisissecret"
+        }
+    ],
+    "teams":[
+        {
+            "id":1,
+            "name":"Code Avengers",
+            "members":[]
+        },
+        {
+            "id":2,
+            "name":"Hack Zero",
+            "members":[]
+        },
+        {
+            "id":3,
+            "name":"Young Justice",
+            "members":[]
+        },
+        {
+            "id":4,
+            "name":"Zulu Sonics",
+            "members":[]
+        },
+        {
+            "id":5,
+            "name":"Lambda Lions",
+            "members":[]
+        }
+    ],
+    "hackers":[
+        {
+            "id":1,
+            "algo_pts":20,
+            "scripting_pts":30,
+            "sql_pts":45
+        },
+        {
+            "id":2,
+            "algo_pts":20,
+            "scripting_pts":30,
+            "sql_pts":45
+        },
+        {
+            "id":3,
+            "algo_pts":20,
+            "scripting_pts":30,
+            "sql_pts":45
+        },
+        {
+            "id":4,
+            "algo_pts":20,
+            "scripting_pts":30,
+            "sql_pts":45
+        }
+    ],
+    "challenges":[
+    	{
+            "id": "fall22#01",
+            "algo": "binary search",
+            "scripting": "Create an alert message using client script",
+            "sql": "Write a SQL statement that displays all the information about all salespeople.",
+            "date": "27/07/2022"
+        },
+        {
+            "id": "fall22#02",
+            "algo": "linear search",
+            "scripting": "Create a business rule to print Hello",
+            "sql": "Write a SQL statement to display a string",
+            "date": "03/08/2022"
+        },
+        {
+            "id": "fall22#03",
+            "algo": "depth-first search",
+            "scripting":
+                "Remove UI policy for Problem field and add same validation using client script",
+            "sql": "Write a SQL query to display three numbers in three columns.",
+            "date": "10/08/2022"
+        },
+        {
+            "id": "fall22#04",
+            "algo": "an algo question",
+            "scripting":
+                "When the category is Software, the assignment group will be Software. Use business rule.",
+            "sql": "Write a SQL query to display the sum of two numbers 10 and 15 from the RDBMS server.",
+            "date": "17/08/2022"
+        },
+        {
+            "id": "fall22#05",
+            "algo": "breadth-first search",
+            "scripting":
+                "Create a common script for emails that will contain INC number, short description, Priority and configuration item:",
+            "sql": "Write an SQL query to display the result of an arithmetic expression.",
+            "date": "24/08/2022"
+        },
+        {
+            "id": "fall22#06",
+            "algo": "rabin-karp algorithm",
+            "scripting":
+                "Auto-Populate user's email and user id when the user changes.",
+            "sql": "Write a SQL statement to display specific columns such as names and commissions for all salespeople.",
+            "date": "31/08/2022"
+        },
+        {
+            "id": "fall22#07",
+            "algo": "z algorithm",
+            "scripting":
+                "Create a new field Date and add validation for the date field so that it takes only future date.",
+            "sql": "Write a query to display the columns in a specific order, such as order date, salesman ID, order number, and purchase amount for all orders.",
+            "date": "07/09/2022"
+        }
+    ],
+    "seasons":{
+        "challenges":[
+            {
+                
+            }
+        ],
+        "hackers":[
+            {
+               
+            }
+        ]
+    }
+       
+    
+}
