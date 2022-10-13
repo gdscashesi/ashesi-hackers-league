@@ -41,11 +41,19 @@ import {
 } from "utils/constants";
 
 // contexts
+<<<<<<< HEAD
 import AppContextProvider from "contexts/AppContext";
 
 function App() {
   return (
     <AppContextProvider>
+=======
+import { AppProvider } from "contexts/AppContext";
+
+function App() {
+  return (
+    <AppProvider>
+>>>>>>> 9b9096a768ffff0b50fb550ddbcf840b78413406
       <Router>
         <Routes>
           <Route path={HOME} element={<Home />} />
@@ -55,9 +63,12 @@ function App() {
           <Route path={CHALLENGES} element={<Challenges />} />
           <Route path={SINGLE_CHALLENGE} element={<SingleChallenge />} />
           <Route path={SANDBOX} element={<Sandbox />} />
+<<<<<<< HEAD
           <Route element={<TeamProtectedRoute />}>
             <Route path={TEAM} element={<Team />} />
           </Route>
+=======
+>>>>>>> 9b9096a768ffff0b50fb550ddbcf840b78413406
           <Route path={ADMIN} element={<AdminProtectedRoute />}>
             <Route index element={<Admin />} />
             <Route path={NEW} element={<New />} />
@@ -66,10 +77,20 @@ function App() {
             <Route path={REPORTS} element={<Reports />} />
             <Route path={EXTRA} element={<Extra />} />
           </Route>
+<<<<<<< HEAD
           <Route path={PAGE_NOT_FOUND} element={<PageNotFound />} />
         </Routes>
       </Router>
     </AppContextProvider>
+=======
+          <Route element={<TeamProtectedRoute />}>
+            <Route path={TEAM} element={<Team />} />
+          </Route>
+          <Route path={PAGE_NOT_FOUND} element={<PageNotFound />} />
+        </Routes>
+      </Router>
+    </AppProvider>
+>>>>>>> 9b9096a768ffff0b50fb550ddbcf840b78413406
   );
 }
 

@@ -8,6 +8,7 @@
  */
 export function sortTable(table, key) {
   const table_ = [...table];
+<<<<<<< HEAD
   const NAME = "name",
     TOTAL = "total";
 
@@ -15,6 +16,13 @@ export function sortTable(table, key) {
     throw new Error("Table does not contain key: " + key);
 
   if (key === NAME) {
+=======
+
+  if (!(key in table_[0]))
+    throw new Error("Table does not contain key: " + key);
+
+  if (key === "name") {
+>>>>>>> 9b9096a768ffff0b50fb550ddbcf840b78413406
     table_.sort((a, b) => {
       const current = a.name.toLowerCase();
       const next = b.name.toLowerCase();
@@ -25,6 +33,7 @@ export function sortTable(table, key) {
     });
   }
 
+<<<<<<< HEAD
   if (key === TOTAL) {
     return table_.sort(
       (a, b) =>
@@ -35,6 +44,8 @@ export function sortTable(table, key) {
     );
   }
 
+=======
+>>>>>>> 9b9096a768ffff0b50fb550ddbcf840b78413406
   table_.sort((a, b) => b[key] - a[key]);
 
   return table_;

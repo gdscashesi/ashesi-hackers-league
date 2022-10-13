@@ -8,9 +8,12 @@ import {
   adminWrapperStyle,
   bannerOutletWrapperStyle,
 } from "./InlineStyles";
+<<<<<<< HEAD
 
 // contexts
 import AdminContextProvider from "contexts/AdminContext";
+=======
+>>>>>>> 9b9096a768ffff0b50fb550ddbcf840b78413406
 
 const AdminProtectedRoute = () => {
   //getting admin from state management, but null for now
@@ -19,6 +22,7 @@ const AdminProtectedRoute = () => {
   return (
     <>
       {admin ? (
+<<<<<<< HEAD
         <AdminContextProvider>
           <div style={{ ...adminWrapperStyle }}>
             <AdminSideNav />
@@ -34,6 +38,21 @@ const AdminProtectedRoute = () => {
             </div>
           </div>
         </AdminContextProvider>
+=======
+        <div style={{ ...adminWrapperStyle }}>
+          <AdminSideNav />
+          <div style={{ ...bannerOutletWrapperStyle }}>
+            <div style={{ ...bannerStyle }}>Ashesi Hackers League</div>
+            <div
+              style={{
+                ...outletWrapperStyle,
+              }}
+            >
+              <Outlet />{" "}
+            </div>
+          </div>
+        </div>
+>>>>>>> 9b9096a768ffff0b50fb550ddbcf840b78413406
       ) : (
         <Navigate to="/" />
       )}

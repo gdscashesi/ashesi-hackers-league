@@ -5,7 +5,11 @@ import { createContext, useState } from "react";
 import { headers, teamScores } from "utils/data";
 import { sortTable } from "utils/functions";
 
+<<<<<<< HEAD
 export const AppContext = createContext();
+=======
+const AppContext = createContext();
+>>>>>>> 9b9096a768ffff0b50fb550ddbcf840b78413406
 
 /**
  * TODO : pre-fetch table data
@@ -14,9 +18,15 @@ export const AppContext = createContext();
  * TODO : Dynamically upate the context with post-fetched data
  */
 
+<<<<<<< HEAD
 function AppContextProvider({ children }) {
   const [scores, setScores] = useState(teamScores);
   // console.log(scores);
+=======
+export function AppProvider({ children }) {
+  const [scores, setScores] = useState(teamScores);
+  console.log(scores);
+>>>>>>> 9b9096a768ffff0b50fb550ddbcf840b78413406
 
   const sortScores = (key) => {
     setScores(sortTable(teamScores, key));
@@ -29,4 +39,8 @@ function AppContextProvider({ children }) {
   );
 }
 
+<<<<<<< HEAD
 export default AppContextProvider;
+=======
+export default AppContext;
+>>>>>>> 9b9096a768ffff0b50fb550ddbcf840b78413406
