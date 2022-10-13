@@ -22,7 +22,7 @@ Competitive series of coding challenges across data structures and algorithms, s
 
 ## Made with ❤️ by
 
-- Oheneba Dade
-- Simon Boateng
-- David Saah
-- Faddal Ibrahim
+- Oheneba Dade (@Oheneba-Dade)
+- Simon Boateng (@Simon-157)
+- Abdul Wahab Abass (@WahabDev12)
+- Faddal Ibrahim (@faddalibrahim)
