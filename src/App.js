@@ -12,14 +12,13 @@ import SingleChallenge from "pages/single_challenge/SingleChallenge";
 import Sandbox from "pages/sandbox/Sandbox";
 import PageNotFound from "pages/errors/page_not_found/PageNotFound";
 import Admin from "pages/admin/Admin";
-import New from "pages/admin/new/New";
-import Insights from "pages/admin/insights/Insights";
+import Create from "pages/admin/create/Create";
 import Published from "pages/admin/published/Published";
-import Reports from "pages/admin/reports/Reports";
+import UpdateTable from "pages/admin/update_table/UpdateTable";
 import Team from "pages/team/Team";
 import AdminProtectedRoute from "pages/protected_routes/AdminProtectedRoute";
 import TeamProtectedRoute from "pages/protected_routes/TeamProtectedRoute";
-import Extra from "pages/admin/extra/Extra";
+import Settings from "pages/admin/settings/Settings";
 
 // utils
 import {
@@ -33,11 +32,10 @@ import {
   ADMIN,
   TEAM,
   PAGE_NOT_FOUND,
-  NEW,
-  INSIGHTS,
+  CREATE,
   PUBLISHED,
-  REPORTS,
-  EXTRA,
+  SETTINGS,
+  UPDATE_TABLE,
 } from "utils/constants";
 
 // contexts
@@ -60,11 +58,10 @@ function App() {
           </Route>
           <Route path={ADMIN} element={<AdminProtectedRoute />}>
             <Route index element={<Admin />} />
-            <Route path={NEW} element={<New />} />
-            <Route path={INSIGHTS} element={<Insights />} />
+            <Route path={CREATE} element={<Create />} />
             <Route path={PUBLISHED} element={<Published />} />
-            <Route path={REPORTS} element={<Reports />} />
-            <Route path={EXTRA} element={<Extra />} />
+            <Route path={UPDATE_TABLE} element={<UpdateTable />} />
+            <Route path={SETTINGS} element={<Settings />} />
           </Route>
           <Route path={PAGE_NOT_FOUND} element={<PageNotFound />} />
         </Routes>

@@ -10,12 +10,12 @@ import {
 } from "./TextAreas";
 
 // styles
-import styles from "./new.module.scss";
+import styles from "./create.module.scss";
 
 // utils
 import { ALGORITHMS, SCRIPTING, SQL, SAVE, PUBLISH } from "utils/constants";
 
-const New = () => {
+const Create = () => {
   const [currentTextArea, setCurrentTextArea] = useState(ALGORITHMS);
   const handleNavClick = (e) => setCurrentTextArea(e.target.innerText);
   const [questionContent, setQuestionContent] = useState({
@@ -83,4 +83,4 @@ const New = () => {
   );
 };
 
-export default New;
+export default Create;
