@@ -7,13 +7,11 @@ export const SINGLE_CHALLENGE = `${CHALLENGES}/:id`;
 export const SANDBOX = `${HOME}sandbox`;
 export const ADMIN = `${HOME}admin`;
 export const NEW = "new";
-export const INSIGHTS = "insights";
 export const PUBLISHED = "published";
-export const REPORTS = "reports";
-export const EXTRA = "extra";
+export const SETTINGS = "settings";
 export const TEAM = `${HOME}team/:name`;
 export const PAGE_NOT_FOUND = "*";
-
+export const UPDATE = "update";
 export const ALGORITHMS = "algorithms";
 export const SCRIPTING = "scripting";
 export const SQL = "sql";
