@@ -168,7 +168,7 @@ export const teamScores = [
 
 // DATA
 
-const teams = [
+export const teams = [
   {
     id: "TM01",
     name: "Supa Strikas",
@@ -209,7 +209,7 @@ const teams = [
   },
 ];
 
-const seasons = {
+export const seasons = {
   fall2022: {
     challenges: [
       {
