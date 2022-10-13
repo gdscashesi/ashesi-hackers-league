@@ -2,13 +2,20 @@
 import { PublishedIcon, NewIcon } from "components/icons/Icons";
 
 //utils
-import { HOME, ADMIN, PUBLISHED, NEW, SETTINGS, UPDATE } from "utils/constants";
+import {
+  HOME,
+  ADMIN,
+  PUBLISHED,
+  CREATE,
+  SETTINGS,
+  UPDATE_TABLE,
+} from "utils/constants";
 
 export const NavigationButtons = [
   {
     icon: <NewIcon />,
-    text: NEW,
-    to: `${ADMIN}${HOME}${NEW}`,
+    text: CREATE,
+    to: `${ADMIN}${HOME}${CREATE}`,
   },
   {
     icon: <PublishedIcon />,
@@ -17,8 +24,8 @@ export const NavigationButtons = [
   },
   {
     icon: <PublishedIcon />,
-    text: UPDATE,
-    to: `${ADMIN}${HOME}${UPDATE}`,
+    text: UPDATE_TABLE,
+    to: `${ADMIN}${HOME}${UPDATE_TABLE}`,
   },
   {
     icon: <PublishedIcon />,

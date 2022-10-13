@@ -12,9 +12,9 @@ import SingleChallenge from "pages/single_challenge/SingleChallenge";
 import Sandbox from "pages/sandbox/Sandbox";
 import PageNotFound from "pages/errors/page_not_found/PageNotFound";
 import Admin from "pages/admin/Admin";
-import New from "pages/admin/new/New";
+import Create from "pages/admin/create/Create";
 import Published from "pages/admin/published/Published";
-import Update from "pages/admin/update/Update";
+import UpdateTable from "pages/admin/update_table/UpdateTable";
 import Team from "pages/team/Team";
 import AdminProtectedRoute from "pages/protected_routes/AdminProtectedRoute";
 import TeamProtectedRoute from "pages/protected_routes/TeamProtectedRoute";
@@ -32,10 +32,10 @@ import {
   ADMIN,
   TEAM,
   PAGE_NOT_FOUND,
-  NEW,
+  CREATE,
   PUBLISHED,
   SETTINGS,
-  UPDATE,
+  UPDATE_TABLE,
 } from "utils/constants";
 
 // contexts
@@ -58,9 +58,9 @@ function App() {
           </Route>
           <Route path={ADMIN} element={<AdminProtectedRoute />}>
             <Route index element={<Admin />} />
-            <Route path={NEW} element={<New />} />
+            <Route path={CREATE} element={<Create />} />
             <Route path={PUBLISHED} element={<Published />} />
-            <Route path={UPDATE} element={<Update />} />
+            <Route path={UPDATE_TABLE} element={<UpdateTable />} />
             <Route path={SETTINGS} element={<Settings />} />
           </Route>
           <Route path={PAGE_NOT_FOUND} element={<PageNotFound />} />
