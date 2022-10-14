@@ -11,32 +11,30 @@ const UpdateTable = () => {
   const newHeaders = useRef([...headers, "actions"]);
   const [update, setUpdate] = useState([...scores]);
 
-  const updateScores = (score, ind, key) => {
-    if (key === "sql") scores[ind].sql = scores[ind].sql + 3;
-    if (key === "algo") scores[ind].algorithms = scores[ind].algorithms + 3;
-    if (key === "script") scores[ind].scripting = scores[ind].scripting + 3;
-    setUpdate([...scores]);
+  const updateScores = (score, key) => {
+    score[key] = score[key] + 3;
+    setUpdate([...update]);
+    return update;
   };
 
-
-  const updateBtns = (score, index) => {
+  const updateBtns = (score) => {
     const btns = [
       <Button
         text="update sql"
         onClick={() => {
-          updateScores(score, index, "sql");
+          updateScores(score, "sql");
         }}
       />,
       <Button
         text="update algo"
         onClick={() => {
-          updateScores(score, index, "algo");
+          updateScores(score, "algorithms");
         }}
       />,
       <Button
         text="update script"
         onClick={() => {
-          updateScores(score, index, "script");
+          updateScores(score, "scripting");
         }}
       />,
     ];
@@ -45,8 +43,8 @@ const UpdateTable = () => {
   };
 
   const insertUpdateBtns = () => {
-    scores.map((score, index) => {
-      return (score["buttons"] = updateBtns(score, index));
+    update.map((score, index) => {
+      return (score["buttons"] = updateBtns(score));
     });
   };
   insertUpdateBtns();

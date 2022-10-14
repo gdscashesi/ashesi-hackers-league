@@ -23,7 +23,7 @@ function AppContextProvider({ children }) {
   };
 
   return (
-    <AppContext.Provider value={{ headers, scores, sortScores, setScores }}>
+    <AppContext.Provider value={{ headers, scores, sortScores }}>
       {children}
     </AppContext.Provider>
   );
