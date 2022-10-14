@@ -2,6 +2,8 @@
 
 Competitive series of coding challenges across data structures and algorithms, scripting ( python & bash ) and SQL.
 
+![Ashesi Hackers League Mac Screen](misc/ahl-on-mac.png)
+
 ## UI/UX
 
 [Figma](https://www.figma.com/file/wDMmmTr70gMdripbK2R06p/ashesi-hacker-league?node-id=0%3A1)
