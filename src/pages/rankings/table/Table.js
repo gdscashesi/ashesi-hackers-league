@@ -38,7 +38,13 @@ const Table = ({ headers, body, sortScores }) => {
               <td>{data.scripting}</td>
               <td>{data.sql}</td>
               <td>{data.algorithms + data.scripting + data.sql}</td>
-              {data.buttons && <td>{data.buttons.map((button) => button)}</td>}
+              {data.buttons && (
+                <td>
+                  {data.buttons.map((button, indx) => (
+                    <span key={indx}>{button}</span>
+                  ))}
+                </td>
+              )}
             </tr>
           )) ?? <div>loading...</div>}
         </tbody>
