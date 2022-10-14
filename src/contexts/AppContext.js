@@ -1,7 +1,7 @@
 // libraries
 import { createContext, useState, useEffect } from "react";
 import { AHL_DB } from "firebase-config";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, doc, getDocs } from "firebase/firestore";
 
 // utils
 import { headers, teamScores } from "utils/data";
@@ -18,7 +18,7 @@ export const AppContext = createContext();
 
 function AppContextProvider({ children }) {
   const [scores, setScores] = useState(teamScores);
-  // console.log(scores);
+  const [teams, setTeams] = useState([]);
 
   const sortScores = (key) => {
     setScores(sortTable(teamScores, key));
@@ -28,15 +28,16 @@ function AppContextProvider({ children }) {
 
   useEffect(() => {
     const getTeams = async () => {
-      const teams = await getDocs(teamsCollectionRef);
-      console.log(teams);
+      const teamsData = await getDocs(teamsCollectionRef);
+      setTeams(teamsData.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 
     getTeams();
+    console.log(teams);
   }, []);
 
   return (
-    <AppContext.Provider value={{ headers, scores, sortScores }}>
+    <AppContext.Provider value={{ headers, scores, sortScores, teams }}>
       {children}
     </AppContext.Provider>
   );
