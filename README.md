@@ -1,6 +1,10 @@
 ![Ashesi Hackers League](src/media/ashesi-hacker-league-banner.jpg)
 
-Competitive series of coding challenges across data structures and algorithms, scripting ( python & bash ) and SQL.
+Competitive series of coding challenges across
+
+- data structures and algorithms
+- scripting ( python & bash )
+- SQL.
 
 ![Ashesi Hackers League Mac Screen](misc/ahl-on-mac.png)
 
