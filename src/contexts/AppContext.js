@@ -1,7 +1,7 @@
 // libraries
 import { createContext, useState, useEffect } from "react";
 import { AHL_DB } from "firebase-config";
-import { collection, doc, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
 // utils
 import { headers, teamScores } from "utils/data";
@@ -34,7 +34,7 @@ function AppContextProvider({ children }) {
 
     getTeams();
     console.log(teams);
-  }, []);
+  }, [teamsCollectionRef, teams]);
 
   return (
     <AppContext.Provider value={{ headers, scores, sortScores, teams }}>
