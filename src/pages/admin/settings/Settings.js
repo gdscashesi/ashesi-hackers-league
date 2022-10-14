@@ -1,7 +1,12 @@
 import React from "react";
+import Button from "components/button/Button";
 
 const Settings = () => {
-  return <div>This is the settings page</div>;
+  return (
+    <div>
+      <Button text="new season" onClick={() => prompt("season name")} />
+    </div>
+  );
 };
 
 export default Settings;
