@@ -61,7 +61,7 @@ const UpdateTable = () => {
     <div className={updateStyles.container}>
       <Table
         headers={newHeaders.current}
-        body={scores}
+        body={scoresRef.current}
         sortScores={sortScores}
       />
     </div>
