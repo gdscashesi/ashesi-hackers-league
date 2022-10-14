@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useEffect } from "react";
+import React, { useContext, useRef, useEffect, useState } from "react";
 import Table from "./../../rankings/table/Table";
 import { AppContext } from "contexts/AppContext";
 import Button from "components/button/Button";
@@ -9,21 +9,15 @@ import updateStyles from "./update.module.scss";
 const UpdateTable = () => {
   const { headers, scores, sortScores } = useContext(AppContext);
   const newHeaders = useRef([...headers, "actions"]);
-  const scoresRef = useRef(scores);
-  // const [update, setUpdate] = useState(scores);
+  const [update, setUpdate] = useState([...scores]);
 
   const updateScores = (score, ind, key) => {
     if (key === "sql") scores[ind].sql = scores[ind].sql + 3;
     if (key === "algo") scores[ind].algorithms = scores[ind].algorithms + 3;
     if (key === "script") scores[ind].scripting = scores[ind].scripting + 3;
-    // setUpdate(scores);
-    scoresRef.current = scores;
-    return scores;
+    setUpdate([...scores]);
   };
 
-  useEffect(() => {
-    scoresRef.current = scores;
-  }, [scoresRef, scores]);
 
   const updateBtns = (score, index) => {
     const btns = [
@@ -61,7 +55,7 @@ const UpdateTable = () => {
     <div className={updateStyles.container}>
       <Table
         headers={newHeaders.current}
-        body={scoresRef.current}
+        body={update}
         sortScores={sortScores}
       />
     </div>
