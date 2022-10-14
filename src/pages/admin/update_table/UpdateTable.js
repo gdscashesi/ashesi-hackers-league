@@ -7,19 +7,20 @@ const UpdateTable = () => {
   const { headers, scores, sortScores } = useContext(AppContext);
   const [newHeaders, setNewHeaders] = useState(null);
   const updateBtns = [
-    <Button text="sql" />,
-    <Button text="algo" />,
-    <Button text="script" />,
+    <Button text="update sql" />,
+    <Button text="update algo" />,
+    <Button text="update script" />,
   ];
 
   const insertUpdateBtns = () => {
     scores.map((score) => {
-      score["buttons"] = updateBtns;
+      return (score["buttons"] = updateBtns);
     });
   };
+  insertUpdateBtns();
 
   useEffect(() => {
-    insertUpdateBtns();
+    // insertUpdateBtns();
     return () => {
       headers.push("actions");
       setNewHeaders(headers);
