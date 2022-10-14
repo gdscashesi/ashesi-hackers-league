@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useEffect, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import Table from "./../../rankings/table/Table";
 import { AppContext } from "contexts/AppContext";
 import Button from "components/button/Button";
