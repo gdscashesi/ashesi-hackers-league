@@ -208,7 +208,7 @@ export const teams = [
     password: "$fddfd179%",
   },
 ];
-
+sessionStorage.setItem("scores", JSON.stringify(teamScores));
 export const seasons = {
   fall2022: {
     challenges: [

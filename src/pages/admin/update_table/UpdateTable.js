@@ -5,36 +5,37 @@ import Button from "components/button/Button";
 
 //styles
 import updateStyles from "./update.module.scss";
+import ToggleButton from "components/toggle_button/ToggleButton";
 
 const UpdateTable = () => {
   const { headers, scores, sortScores } = useContext(AppContext);
+  const [old, setOld] = useState(false);
   const newHeaders = useRef([...headers, "actions"]);
   const [update, setUpdate] = useState([...scores]);
-
-  const updateScores = (score, key) => {
-    score[key] = score[key] + 3;
+  const updateScores = (score, ind, key) => {
+    update[ind][key] = update[ind][key] + 3;
     setUpdate([...update]);
-    return update;
+    // return update;
   };
 
-  const updateBtns = (score) => {
+  const updateBtns = (score, index) => {
     const btns = [
       <Button
         text="update sql"
         onClick={() => {
-          updateScores(score, "sql");
+          updateScores(score, index, "sql");
         }}
       />,
       <Button
         text="update algo"
         onClick={() => {
-          updateScores(score, "algorithms");
+          updateScores(score, index, "algorithms");
         }}
       />,
       <Button
         text="update script"
         onClick={() => {
-          updateScores(score, "scripting");
+          updateScores(score, index, "scripting");
         }}
       />,
     ];
@@ -44,18 +45,30 @@ const UpdateTable = () => {
 
   const insertUpdateBtns = () => {
     update.map((score, index) => {
-      return (score["buttons"] = updateBtns(score));
+      return (score["buttons"] = updateBtns(score, index));
     });
   };
   insertUpdateBtns();
 
+  const onClick = () => {
+    setOld(!old);
+  };
   return (
     <div className={updateStyles.container}>
-      <Table
-        headers={newHeaders.current}
-        body={update}
-        sortScores={sortScores}
-      />
+      <ToggleButton text="Table state" Onclick={onClick} />
+      {!old ? (
+        <Table
+          headers={newHeaders.current}
+          body={scores}
+          sortScores={sortScores}
+        />
+      ) : (
+        <Table
+          headers={headers}
+          body={JSON.parse(sessionStorage.getItem("scores"))}
+          sortScores={sortScores}
+        />
+      )}
     </div>
   );
 };
