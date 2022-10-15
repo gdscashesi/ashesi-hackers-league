@@ -3,13 +3,13 @@ import React, { useState } from "react";
 import tableStyles from "./table.module.scss";
 
 const Table = ({ headers, body, sortScores }) => {
-  const [col,setCol] = useState(0);
+  const [col, setCol] = useState(0);
   return (
     <div className={tableStyles.tableWrapper}>
       <table cellSpacing="0">
         <colgroup>
-          <col span={col} style={{"background-color":"#ffff"}} />
-          <col span={1} style={{"background-color": "#FAFAFA"}} />
+          <col span={col} style={{ backgroundColor: "#ffff" }} />
+          <col span={1} style={{ backgroundColor: "#FAFAFA" }} />
         </colgroup>
         <thead>
           <tr>
@@ -17,7 +17,10 @@ const Table = ({ headers, body, sortScores }) => {
               return (
                 <th
                   title="sort"
-                  onClick={() => {sortScores(headName.toLowerCase());setCol(index)}}
+                  onClick={() => {
+                    sortScores(headName.toLowerCase());
+                    setCol(index);
+                  }}
                   key={index}
                 >
                   {headName}
@@ -35,6 +38,7 @@ const Table = ({ headers, body, sortScores }) => {
               <td>{data.scripting}</td>
               <td>{data.sql}</td>
               <td>{data.algorithms + data.scripting + data.sql}</td>
+              <td>{data.buttons ?? data.buttons}</td>
             </tr>
           )) ?? <div>loading...</div>}
         </tbody>
