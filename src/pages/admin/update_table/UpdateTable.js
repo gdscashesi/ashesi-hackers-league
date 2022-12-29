@@ -18,22 +18,39 @@ const UpdateTable = () => {
     // return update;
   };
 
+  const updateBtnStyles = {
+    background: "var(--light-violet)",
+    border: "none",
+    padding: "1rem 0.8rem",
+    width: "8rem",
+    font: "inherit",
+    cursor: "pointer",
+    outline: "inherit",
+    color: "var(--text-violet)",
+    // fontWeight: "bold",
+    fontFamily: "sans-serif",
+    borderRadius: "0.25rem",
+  };
+
   const updateBtns = (score, index) => {
     const btns = [
       <Button
         text="update sql"
+        styles={updateBtnStyles}
         onClick={() => {
           updateScores(score, index, "sql");
         }}
       />,
       <Button
         text="update algo"
+        styles={updateBtnStyles}
         onClick={() => {
           updateScores(score, index, "algorithms");
         }}
       />,
       <Button
         text="update script"
+        styles={updateBtnStyles}
         onClick={() => {
           updateScores(score, index, "scripting");
         }}
