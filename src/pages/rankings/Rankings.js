@@ -26,10 +26,21 @@ function Rankings() {
           <Button text="register your team" to={REGISTER} />
         </div>
       </div>
-
+      
+      {
+        scores.length > 0 ? 
       <div className={rankingsStyles.tableParent}>
         <Table headers={headers} body={scores} sortScores={sortScores} />
+      </div> : <div className={rankingsStyles.tableParent}>
+         <div className={rankingsStyles.placeholder}>
+            <h2>No new rankings...Sign up for <strong className={rankingsStyles.highlight}>upcoming challenges</strong> 🎉
+            </h2>
+         </div>
+            <div className={rankingsStyles.centerBtn}>
+              <Button text="Sign Up" to={REGISTER}  />
+            </div>
       </div>
+      }
     </div>
   );
 }
