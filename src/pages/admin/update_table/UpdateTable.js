@@ -66,16 +66,16 @@ const UpdateTable = () => {
 
   return (
     <div className={updateStyles.container}>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div className={updateStyles.tableToggle}>
         <ToggleButton text="Table state" Onclick={toggelTableVersion} />
 
         {!old ? (
-          <div>
+          <div style={{ display: "flex", alignItems: "center" }}>
             <UndoIcon onClick={undoAllScoreUpdates} />
             <Button
               onClick={publishScoreUpdates}
               text="publish"
-              styles={{ background: "var(--gradient-green)" }}
+              styles={{ background: "var(--gradient-green)", margin: "0 1rem" }}
             />
           </div>
         ) : null}
