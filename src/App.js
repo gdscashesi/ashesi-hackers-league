@@ -9,7 +9,7 @@ import Register from "pages/auth/register/Register";
 import Rankings from "pages/rankings/Rankings";
 import Challenges from "pages/challenges/Challenges";
 import SingleChallenge from "pages/single_challenge/SingleChallenge";
-import Sandbox from "pages/sandbox/Sandbox";
+import Sandbox from "pages/sandbox/Sandbox";  
 import PageNotFound from "pages/errors/page_not_found/PageNotFound";
 import Admin from "pages/admin/Admin";
 import Create from "pages/admin/create/Create";
