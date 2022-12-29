@@ -1,0 +1,37 @@
+.container {
+  height: inherit;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  padding-bottom: 5rem;
+
+  %scale {
+    transform: scale(150%);
+    transition: transform 0.1s linear;
+  }
+
+  table td:last-child {
+    svg {
+      margin: 0 0.3rem;
+      &:hover {
+        fill: #aaa;
+        @extend %scale;
+      }
+      &:active {
+        fill: var(--deep-green);
+      }
+    }
+  }
+
+  .tableToggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg {
+      cursor: pointer;
+      &:hover {
+        fill: var(--deep-green);
+        @extend %scale;
+      }
+    }
+  }
+}

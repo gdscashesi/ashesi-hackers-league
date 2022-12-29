@@ -37,6 +37,7 @@ export const AppContext = createContext();
 //   });
 // })();
 
+sessionStorage.setItem("scores", JSON.stringify(teamScores));
 function AppContextProvider({ children }) {
   const [scores, setScores] = useState(teamScores);
   const [teams, setTeams] = useState([]);
