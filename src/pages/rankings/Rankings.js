@@ -1,5 +1,5 @@
 // libraries
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 
 // components
 import Table from "./table/Table";
