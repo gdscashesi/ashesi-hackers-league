@@ -22,6 +22,28 @@
   overflow-x: hidden;
 }
 
+.placeholder{
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+
+}
+
+.placeholder > h2{
+  color:rgb(46, 44, 44);
+}
+
+
+.centerBtn{
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.highlight{
+  color:#3D8856;
+}
+
 @media screen and (min-width: 768px) {
   .banner {
     flex-flow: row;
