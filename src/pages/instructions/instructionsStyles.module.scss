@@ -1,0 +1,46 @@
+.rankingsWrapper {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.banner {
+  padding: 0.8rem;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  background: #ffffff;
+  font-size: 18px;
+  overflow-y: auto;
+
+  > div {
+    padding: 1rem;
+    align-items: center;
+    width: 50%;
+    > h2 {
+      background-color: #32606f;
+      padding: 0.5rem;
+      color: #ffffff;
+    }
+
+    > p {
+      line-height: 2;
+      font-size: 18px;
+      list-style-type: "🖊 ";
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    flex-flow: row;
+  }
+}
