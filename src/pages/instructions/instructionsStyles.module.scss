@@ -25,7 +25,7 @@
     padding: 1rem;
     align-items: center;
     width: 50%;
-    > h2 {
+    > h3 {
       background-color: #32606f;
       padding: 0.5rem;
       color: #ffffff;
@@ -33,7 +33,7 @@
 
     > p {
       line-height: 2;
-      font-size: 18px;
+      font-size: 14px;
       list-style-type: "🖊 ";
     }
   }
@@ -42,5 +42,9 @@
 @media screen and (min-width: 768px) {
   .banner {
     flex-flow: row;
+  }
+
+  .container > div > p {
+    font-size: 16px;
   }
 }

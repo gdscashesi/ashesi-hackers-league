@@ -1,17 +1,30 @@
 import ChallengeBubble from "./challenge-bubble/ChallengeBubble";
 import challengesStyles from "./challenges.module.scss";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Popup } from "components/pop-up/PopUp";
 
 const Challenges = () => {
+  const [show, setShow] = useState(false);
   const seasons = ["spring-2023", "fall-2022", "spring-2021", "fall-2020"];
   const [, setCurrentSeason] = useState("spring-2023");
   const challengesCount = 7;
   const totalCount = 12;
   const [BUBBLE_GREY, BUBBLE_BLUE] = ["bubbleGrey", "bubbleBlue"];
 
+  useEffect(() => {
+    setTimeout(() => {
+      setShow(true);
+    }, 2000);
+
+    return () => {};
+  }, []);
+
   return (
     <div className={challengesStyles.wrapper}>
+      {show ? (
+        <Popup title="General Rules" closePopup={() => setShow(false)} />
+      ) : null}
       <div>
         <h1>Challenges</h1>
         <select

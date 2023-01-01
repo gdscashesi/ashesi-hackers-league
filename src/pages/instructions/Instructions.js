@@ -16,9 +16,13 @@ const Instructions = () => {
       <div className={instructionsStyles.container}>
         {/* <div className={instructionsStyles.divider}></div> */}
         <div>
-          <h2>General Rules</h2>
+          <h3>General Rules</h3>
           <p>
             <li>Start by understanding the problem statement:</li>
+            <li>
+              Identify the key constraints: Look for any constraints in the
+              problem that may affect your solution.
+            </li>
             <li>
               Identify the key constraints: Look for any constraints in the
               problem that may affect your solution.
@@ -34,9 +38,13 @@ const Instructions = () => {
           </p>
         </div>
         <div>
-          <h2>Points Accumulation</h2>
+          <h3>Points Accumulation</h3>
           <p>
             <li>Start by understanding the problem statement:</li>
+            <li>
+              Identify the key constraints: Look for any constraints in the
+              problem that may affect your solution.
+            </li>
             <li>
               Identify the key constraints: Look for any constraints in the
               problem that may affect your solution.
@@ -52,9 +60,13 @@ const Instructions = () => {
           </p>
         </div>
         <div>
-          <h2>Teams Rules</h2>
+          <h3>Teams Rules</h3>
           <p>
             <li>Start by understanding the problem statement:</li>
+            <li>
+              Identify the key constraints: Look for any constraints in the
+              problem that may affect your solution.
+            </li>
             <li>
               Identify the key constraints: Look for any constraints in the
               problem that may affect your solution.
@@ -70,9 +82,13 @@ const Instructions = () => {
           </p>
         </div>
         <div>
-          <h2>Other Rules</h2>
+          <h3>Other Rules</h3>
           <p>
             <li>Start by understanding the problem statement:</li>
+            <li>
+              Identify the key constraints: Look for any constraints in the
+              problem that may affect your solution.
+            </li>
             <li>
               Identify the key constraints: Look for any constraints in the
               problem that may affect your solution.
