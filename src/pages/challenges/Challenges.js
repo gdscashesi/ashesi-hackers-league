@@ -3,6 +3,7 @@ import challengesStyles from "./challenges.module.scss";
 
 import { useState, useEffect } from "react";
 import { Popup } from "components/pop-up/PopUp";
+import { generalRules } from "utils/data";
 
 const Challenges = () => {
   const [show, setShow] = useState(false);
@@ -23,7 +24,8 @@ const Challenges = () => {
   return (
     <div className={challengesStyles.wrapper}>
       {show ? (
-        <Popup title="General Rules" closePopup={() => setShow(false)} />
+        <Popup title="General Rules" body={generalRules} closePopup={() => setShow(false)}
+        />
       ) : null}
       <div>
         <h1>Challenges</h1>

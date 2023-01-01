@@ -14,11 +14,27 @@
   right: 30%;
   bottom: 30%;
   top: 30%;
-  text-align: center;
   margin: auto;
   border-radius: 15px;
   border-color: black;
   background: white;
-  color: black;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  h3 {
+    text-align: center;
+    border-radius: 15px 0px 15px;
+    background-color: #32606f;
+    padding: 0.5rem;
+    color: #ffffff;
+  }
+  p {
+    line-height: 2;
+    font-size: 14px;
+    list-style-type: "🖊 ";
+  }
+  button {
+    position: absolute;
+    left: 45%;
+    padding: 0.5rem;
+    background-color: #32606f;
+  }
 }
