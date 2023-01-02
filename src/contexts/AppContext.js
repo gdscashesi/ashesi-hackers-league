@@ -16,6 +16,7 @@ export const AppContext = createContext();
  * TODO : Dynamically upate the context with post-fetched data
  */
 
+sessionStorage.setItem("scores", JSON.stringify(teamScores));
 function AppContextProvider({ children }) {
   const [scores, setScores] = useState(teamScores);
   const [teams, setTeams] = useState([]);
