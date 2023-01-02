@@ -1,7 +1,7 @@
 // libraries
 import { createContext, useState, useEffect } from "react";
 import { AHL_DB } from "firebase-config";
-import { collection, getDocs, addDoc } from "firebase/firestore";
+import { collection, getDocs} from "firebase/firestore";
 
 // utils
 import { headers, teamScores } from "utils/data";
