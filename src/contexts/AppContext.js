@@ -1,7 +1,7 @@
 // libraries
 import { createContext, useState, useEffect } from "react";
 import { AHL_DB } from "firebase-config";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs} from "firebase/firestore";
 
 // utils
 import { headers, teamScores } from "utils/data";
@@ -15,6 +15,27 @@ export const AppContext = createContext();
  * TODO : set team names to empty array
  * TODO : Dynamically upate the context with post-fetched data
  */
+// (async () => {
+//   await addDoc(collection(AHL_DB, "teams"), {
+//     id: "HOLOCAUST",
+//     name: "Zulu Sonics",
+//     members: [
+//       {
+//         name: "Michel Appa",
+//         email: "michael.appa@ashesi.edu.gh",
+//       },
+//       {
+//         name: "Solomon Grandy",
+//         email: "solomon.grandy@ashesi.edu.gh",
+//       },
+//       {
+//         name: "Kakashi Hatake",
+//         email: "kakashi.hatake@ashesi.edu.gh",
+//       },
+//     ],
+//     password: "$fddfd179%",
+//   });
+// })();
 
 sessionStorage.setItem("scores", JSON.stringify(teamScores));
 function AppContextProvider({ children }) {
@@ -33,7 +54,9 @@ function AppContextProvider({ children }) {
       setTeams(teamsData.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
     getTeams();
+
     console.log(teams);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

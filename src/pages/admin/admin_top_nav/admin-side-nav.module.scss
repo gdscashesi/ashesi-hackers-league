@@ -7,16 +7,36 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   position: relative;
 
+  h1 {
+    color: var(--gradient-green);
+    padding: 3rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
   button {
     width: 100%;
     border-radius: 0;
     background-color: white;
+    text-transform: uppercase;
+    color: #aaa;
+    font-weight: 500;
+    
+    &:hover {
+      border-right: 0.15rem solid var(--gradient-green);
+      transition: all 0.1s linear;
+      font-weight: 800;
+      font-size: 105%;
+    }
 
     a {
-      color: #a1a1a1;
-
+      color: inherit;
+      transition: color 0.2s linear;
+      padding-right: 0.2rem;
+      
       &:hover {
-        background-color: #f0f0f0;
+        color: var(--gradient-green);
+        background-color: #f0f0f080;
       }
     }
   }

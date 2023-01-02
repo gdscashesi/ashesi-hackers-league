@@ -3,14 +3,16 @@
   flex-flow: column;
   justify-content: space-between;
   height: 100%;
-  padding: 0 1rem;
+  padding: 1rem 2rem;
 
   button {
     color: var(--gradient-blue);
     background-color: var(--light-blue);
-    border-radius: 2rem;
     width: 8rem;
-    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    margin: 0 !important;
+    border-radius: 0;
+    transition: none;
 
     &:hover {
       background-color: var(--gradient-blue);
@@ -22,20 +24,20 @@
     padding: 2rem;
     outline: none;
     border: none;
-    border-left: 0.2rem solid #f0f0f0;
     transition: border-color 0.7s linear;
     font-family: var(--app-font-primary);
     flex-grow: 1;
-
-    &:focus {
-      border-color: var(--gradient-blue);
-    }
+    border-radius: 1rem;
+    resize: none;
+    background-color: #f0f0f080;
+    margin: 0 !important;
+    border-top-left-radius: 0;
   }
 }
 
-.questionButtons {
-  padding: 1rem 0;
-}
+// .questionButtons {
+//   padding: 1rem 0;
+// }
 
 .savePublishButtonsWrapper {
   padding: 1rem 0;
@@ -43,16 +45,25 @@
 
   button {
     border-radius: 0.3rem;
+    transition: all 0.2s linear;
     //save
     &:first-child {
-      color: var(--gradient-blue);
+      color: #aaa;
       background-color: transparent;
+      font-size: 105%;
+      &:hover {
+        color: var(--deep-green);
+        font-size: 110%;
+      }
     }
 
     //publish
     &:last-child {
       color: white;
-      background-color: var(--gradient-blue);
+      background-color: var(--deep-green);
+      &:hover {
+        background-color: var(--gradient-green);
+      }
     }
   }
 }
