@@ -1,48 +1,28 @@
-//components
-import { 
-    InsightsIcon, 
-    PublishedIcon, 
-    ReportsIcon,
-    NewIcon
-} from 'components/icons/Icons'
-
 //utils
-import { 
-    HOME,
-    ADMIN,
-    INSIGHTS,
-    PUBLISHED,
-    REPORTS,
-    NEW,
-    EXTRA
-} from "utils/constants"
-
+import {
+  HOME,
+  ADMIN,
+  PUBLISHED,
+  CREATE,
+  SETTINGS,
+  UPDATE_TABLE,
+} from "utils/constants";
 
 export const NavigationButtons = [
-    {
-        icon:<NewIcon />,
-        text:NEW,
-        to:`${ADMIN}${HOME}${NEW}`
-    },
-    {
-        icon:<InsightsIcon />,
-        text:INSIGHTS,
-        to:`${ADMIN}${HOME}${INSIGHTS}`
-    },
-    {
-        icon:<ReportsIcon />,
-        text:REPORTS,
-        to:`${ADMIN}${HOME}${REPORTS}`
-    },
-    {
-        icon:<PublishedIcon />,
-        text:PUBLISHED,
-        to:`${ADMIN}${HOME}${PUBLISHED}`
-    },
-    {
-        icon:<PublishedIcon />,
-        text:EXTRA,
-        to:`${ADMIN}${HOME}${EXTRA}`
-    },
-]
-
+  {
+    text: CREATE,
+    to: `${ADMIN}${HOME}${CREATE}`,
+  },
+  {
+    text: PUBLISHED,
+    to: `${ADMIN}${HOME}${PUBLISHED}`,
+  },
+  {
+    text: UPDATE_TABLE,
+    to: `${ADMIN}${HOME}${UPDATE_TABLE}`,
+  },
+  {
+    text: SETTINGS,
+    to: `${ADMIN}${HOME}${SETTINGS}`,
+  },
+];

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Published = () => {
-  return (
-    <div>This is the admin Published events page</div>
-  )
-}
+  return <div>Published Questions Show Up Here</div>;
+};
 
-export default Published
+export default Published;

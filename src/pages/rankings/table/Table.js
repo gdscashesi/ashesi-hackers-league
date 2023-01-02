@@ -1,18 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
 import tableStyles from "./table.module.scss";
 
 const Table = ({ headers, body, sortScores }) => {
+  const [col, setCol] = useState(0);
   return (
     <div className={tableStyles.tableWrapper}>
       <table cellSpacing="0">
+        <colgroup>
+          <col span={col} style={{ backgroundColor: "#ffff" }} />
+          <col span={1} style={{ backgroundColor: "#FAFAFA" }} />
+        </colgroup>
         <thead>
           <tr>
             {headers?.map((headName, index) => {
               return (
                 <th
                   title="sort"
-                  onClick={() => sortScores(headName.toLowerCase())}
+                  onClick={() => {
+                    sortScores(headName.toLowerCase());
+                    setCol(index);
+                  }}
                   key={index}
                 >
                   {headName}
@@ -30,6 +38,7 @@ const Table = ({ headers, body, sortScores }) => {
               <td>{data.scripting}</td>
               <td>{data.sql}</td>
               <td>{data.algorithms + data.scripting + data.sql}</td>
+              <td>{data.buttons ?? data.buttons}</td>
             </tr>
           )) ?? <div>loading...</div>}
         </tbody>

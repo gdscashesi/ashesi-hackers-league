@@ -10,12 +10,12 @@ import {
 } from "./TextAreas";
 
 // styles
-import styles from "./new.module.scss";
+import styles from "./create.module.scss";
 
 // utils
 import { ALGORITHMS, SCRIPTING, SQL, SAVE, PUBLISH } from "utils/constants";
 
-const New = () => {
+const Create = () => {
   const [currentTextArea, setCurrentTextArea] = useState(ALGORITHMS);
   const handleNavClick = (e) => setCurrentTextArea(e.target.innerText);
   const [questionContent, setQuestionContent] = useState({
@@ -39,9 +39,17 @@ const New = () => {
     console.log(questionContent);
   };
 
-  const storeQuestionContent = () => {
+  const saveQuestionsToLocalStorage = () => {
     localStorage.setItem("questionContent", JSON.stringify(questionContent));
     alert("questions saved");
+  };
+
+  const publishQuestions = () => {
+    const response = window.confirm("you are about to publish these questions");
+
+    if (response) {
+      // async publishing to firebase
+    }
   };
 
   const QUESTION_TYPE_COMPONENTS = {
@@ -69,18 +77,29 @@ const New = () => {
     <div className={styles.wrapper}>
       <div className={styles.questionButtons}>
         {Object.keys(QUESTION_TYPE_COMPONENTS).map((category) => (
-          <Button key={category} text={category} onClick={handleNavClick} />
+          <Button
+            key={category}
+            text={category}
+            onClick={handleNavClick}
+            styles={{
+              cssText: `${
+                currentTextArea === category
+                  ? "background-color: #f0f0f080; color: #555; font-size: 105%; font-weight: 500"
+                  : "background-color: white; color: #aaa"
+              }`,
+            }}
+          />
         ))}
       </div>
 
       {QUESTION_TYPE_COMPONENTS[currentTextArea]}
 
       <div className={styles.savePublishButtonsWrapper}>
-        <Button text={SAVE} onClick={storeQuestionContent} />
-        <Button text={PUBLISH} />
+        <Button text={SAVE} onClick={saveQuestionsToLocalStorage} />
+        <Button text={PUBLISH} onClick={publishQuestions} />
       </div>
     </div>
   );
 };
 
-export default New;
+export default Create;

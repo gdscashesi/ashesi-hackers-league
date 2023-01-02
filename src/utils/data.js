@@ -168,10 +168,9 @@ export const teamScores = [
 
 // DATA
 
-const teams = [
+export const teams = [
   {
-    id: "TM01",
-    name: "Supa Strikas",
+    name: "Banzai Sharks",
     members: [
       {
         name: "Michel Appa",
@@ -189,8 +188,25 @@ const teams = [
     password: "$fddfd179%",
   },
   {
-    id: "TM02",
-    name: "Supa Strikas",
+    name: "Carnivore Hurricanes",
+    members: [
+      {
+        name: "Michel Appa",
+        email: "michael.appa@ashesi.edu.gh",
+      },
+      {
+        name: "Solomon Grandy",
+        email: "solomon.grandy@ashesi.edu.gh",
+      },
+      {
+        name: "Kakashi Hatake",
+        email: "kakashi.hatake@ashesi.edu.gh",
+      },
+    ],
+    password: "$fddfd179%",
+  },
+  {
+    name: "Dream Gangstaz",
     members: [
       {
         name: "Michel Appa",
@@ -209,7 +225,7 @@ const teams = [
   },
 ];
 
-const seasons = {
+export const seasons = {
   fall2022: {
     challenges: [
       {
