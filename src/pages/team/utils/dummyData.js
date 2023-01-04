@@ -1,4 +1,7 @@
 
+export const IMG_URL = "https://img.icons8.com/color/50/null/circled-user-male-skin-type-7--v1.png";
+
+
 export const categoryRank = [
     {
         name: "Algorithms",

@@ -13,13 +13,11 @@ import { HOME } from "utils/constants";
 // utils
 import { dummyMembers } from "./utils/dummyData";
 import { categoryRank } from "./utils/dummyData";
-
-
-const IMG_URL = "https://img.icons8.com/color/50/null/circled-user-male-skin-type-7--v1.png";
-
+import { IMG_URL } from "./utils/dummyData";
 
 const Team = () => {
 
+  // A popup to add a new member to the team
   const handleAddMember = () => {
     prompt("Add a new member")
   }
@@ -27,52 +25,53 @@ const Team = () => {
   return (
     <div className={rankingsStyles.rankingsWrapper}>
       <div className={rankingsStyles.banner}>
-        <h1>Team Profile</h1>
+          <h1>Team Profile</h1>
 
-        <div>
-          <Button text="Go back" to={HOME} />
-          <Button text="Add member" onClick={handleAddMember}/>
-        </div>
+          <div>
+            <Button text="Go back" to={HOME} />
+            <Button text="Add member" onClick={handleAddMember}/>
+          </div>
       </div>
       
       <div className={teamStyles.baseWrapper}>
 
 		<div className={teamStyles.info}>
-      <div className={teamStyles.itemOne}>
-        <div className={teamStyles.imgWrapper}>
-          <img alt="group_img" src="https://img.icons8.com/color/48/null/european-dragon.png"/>
+        <div className={teamStyles.itemOne}>
+          <div className={teamStyles.imgWrapper}>
+            <img alt="group_img" 
+              src="https://img.icons8.com/color/48/null/european-dragon.png"/>
+          </div>
+        <div className={teamStyles.textWrapper}>
+          <h3>Algo Maniacs</h3>
+            <h4>Quad-team</h4>
+            <h6>Created 12/03/23</h6>
+
         </div>
-      <div className={teamStyles.textWrapper}>
-        <h3>Algo Maniacs</h3>
-          <h4>Quad-team</h4>
-          <h6>Created 12/03/23</h6>
 
-      </div>
+        </div>
 
-      </div>
+        <div className={teamStyles.itemTwo}>
+            <div className={teamStyles.itemWrapper}>
+                <div className={teamStyles.centerText}>
+                  <h2 className={teamStyles.number}>4</h2>
+                </div>
+                <span>members</span>
+            </div>
 
-      <div className={teamStyles.itemTwo}>
-          <div className={teamStyles.itemWrapper}>
-              <div className={teamStyles.centerText}>
-                <h2 className={teamStyles.number}>4</h2>
-              </div>
-              <span>members</span>
-          </div>
+            <div className={teamStyles.itemWrapper}>
+                <div className={teamStyles.centerText}>
+                  <h2 className={teamStyles.number}>5th</h2>
+                </div>
+                <span>overall ranking</span>
+            </div>
 
-          <div className={teamStyles.itemWrapper}>
-              <div className={teamStyles.centerText}>
-                <h2 className={teamStyles.number}>5th</h2>
-              </div>
-              <span>overall ranking</span>
-          </div>
-
-          <div className={teamStyles.itemWrapper}>
-              <div className={teamStyles.centerText}>
-                <h2 className={teamStyles.number}>70</h2>
-              </div>
-              <span>points gained</span>
-          </div>
-      </div>
+            <div className={teamStyles.itemWrapper}>
+                <div className={teamStyles.centerText}>
+                  <h2 className={teamStyles.number}>70</h2>
+                </div>
+                <span>points gained</span>
+            </div>
+        </div>
 
 		</div>
 

@@ -32,7 +32,7 @@ function Rankings() {
       
       
       {
-        scores.length > 0 || !loading ? 
+        scores.length > 0 ? 
       <div className={rankingsStyles.tableParent}>
         <Table headers={headers} body={scores} sortScores={sortScores} />
       </div> : <div className={rankingsStyles.tableParent}>
