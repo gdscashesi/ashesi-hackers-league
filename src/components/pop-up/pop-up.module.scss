@@ -21,7 +21,11 @@
     background-color: #32606f;
     padding: 0.5rem;
     color: #ffffff;
-  }
+    -webkit-border-radius: 15px 0px 15px;
+    -moz-border-radius: 15px 0px 15px;
+    -ms-border-radius: 15px 0px 15px;
+    -o-border-radius: 15px 0px 15px;
+}
   p {
     line-height: 2;
     font-size: 14px;
