@@ -17,7 +17,7 @@ import { IMG_URL } from "./utils/dummyData";
 
 const Team = () => {
 
-  // A popup to add a new member to the team
+  // A popup to add a new member to the team: *TENTATIVE*
   const handleAddMember = () => {
     prompt("Add a new member")
   }
