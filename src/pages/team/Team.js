@@ -1,5 +1,5 @@
 // libraries
-import React from "react";
+import React, { useState } from "react";
 
 // components
 import Button from "components/button/Button";
@@ -17,6 +17,10 @@ import { IMG_URL } from "./utils/dummyData";
 
 const Team = () => {
 
+  // Show "add member" button only when team is logged in
+  // Initially set to False
+  const [isLoggedIn, ] = useState(false);
+
   // A popup to add a new member to the team: *TENTATIVE*
   const handleAddMember = () => {
     prompt("Add a new member")
@@ -29,11 +33,11 @@ const Team = () => {
 
           <div>
             <Button text="Go back" to={HOME} />
-            <Button text="Add member" onClick={handleAddMember}/>
+            { isLoggedIn && <Button text="Add member" onClick={handleAddMember}/> }
           </div>
       </div>
       
-      <div className={teamStyles.baseWrapper}>
+    <div className={teamStyles.baseWrapper}>
 
 		<div className={teamStyles.info}>
         <div className={teamStyles.itemOne}>
@@ -49,7 +53,7 @@ const Team = () => {
         </div>
 
         </div>
-
+ 
         <div className={teamStyles.itemTwo}>
             <div className={teamStyles.itemWrapper}>
                 <div className={teamStyles.centerText}>
@@ -114,8 +118,11 @@ const Team = () => {
                       </div>
                       <div className={teamStyles.scorePoint}>
                             <h4 className={teamStyles.userName}>{category.name}</h4>
-                            <small className={teamStyles.rank}>Rank: {category.rank}th place</small>
+                            <small className={teamStyles.rank}>Points: 200</small>
+                            <small className={teamStyles.rank}>Rank: {category.rank}th</small>
                       </div>
+
+
                   </div>
                 )
             })

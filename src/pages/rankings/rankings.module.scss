@@ -8,7 +8,7 @@
 .banner {
   padding: 1rem;
   color: white;
-
+  flex-flow: row;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -44,7 +44,23 @@
   color:#3D8856;
 }
 
+
+
+@media only screen and (max-width: 768px) {
+  .rankingsWrapper {
+      flex-flow: column;
+      overflow-y: scroll;
+  }
+  .banner {
+      padding: 0.5rem;
+      flex-flow: column;
+      justify-content: center;
+  }
+}
+
 @media screen and (min-width: 768px) {
+
+
   .banner {
     flex-flow: row;
   }
