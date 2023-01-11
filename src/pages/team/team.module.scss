@@ -1,0 +1,300 @@
+
+  .baseWrapper {
+    background-color: #f3ecec;
+    display: block;
+    justify-content: center;
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+  }
+
+
+  .imgWrapper{
+    width:100px;
+    height:100px;
+    border-radius: 1000px;
+    border:3px solid #387463;
+    padding:15px;
+    margin: auto;
+
+  }
+
+  .imgWrapper > img{
+    width:70px;
+    height:70px;
+  }
+
+
+  .textWrapper > h3{
+    color:#387463;
+    font-size:23px;
+  }
+
+  .textWrapper > h4, h6{
+    font-weight: 500;
+  }
+
+
+  .textWrapper{
+    padding: 20px;
+
+  }
+  .textWrapper > h3, h4, h6{
+      text-align: center;
+      padding-top:10px;
+  }
+
+  .info{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    gap:1rem;
+    justify-content: center;    
+    margin-top:1.5rem;
+  }
+
+  .divWrapper{
+    display: flex;
+    width:100%;
+    justify-content: center;    
+    margin-top:1.5rem;
+  }
+
+  .itemOne {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width:20rem;
+    height:240px ;
+    padding:10px;
+
+  }
+
+  .number{
+    font-size: 50px;
+    color:#387463;
+  }
+
+
+  .centerText{
+    width:120px;
+    margin: auto;
+  }
+
+  .members{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width:61rem;
+    height:300px;
+    margin-top:0.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+    padding-top:5px;
+
+  }
+
+
+   /* RANKING SUB-DIV BEGINS*/
+  .sc > h2{
+    font-weight: 500;
+  }
+
+  .rankings{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width:61rem;
+    height:300px;
+    margin-top:0.5rem;
+    margin-bottom:4rem;    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+
+  }
+  
+  .itemTwo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:3rem;
+    padding:40px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width:40rem;
+    height:240px;
+  }
+
+  .scorePoint{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .categoryName{
+      color: #022b1e;
+      font-weight: bolder;
+  }
+
+  .rank{
+    margin-top:5px;
+  }
+
+  /* RANKING SUB-DIV ENDS*/
+
+  .itemWrapper{
+    margin-top:1.8rem;
+
+  }
+  
+  /* MEMBERS AND RANKING GRID BEGIN*/
+  
+  .section {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .userPic{
+    width:60px;
+    height:60px;
+  }
+
+  .userIcon{
+    font-size: 40px;
+  }
+  
+  
+  .section1 {
+      display: flex;
+      gap:0.5rem;
+      align-items: center;
+  }
+
+
+
+
+  /* MEMBERS AND RANKING GRID END*/
+
+
+
+  /* RESPONSIVENESS */  
+
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android & Iphones) */ 
+  @media screen and (max-width:780px)  { 
+    .info{
+        flex-wrap: wrap;
+    }
+
+    .itemOne{
+      width: 21rem;
+      height:230px;
+    }
+
+    .itemTwo{
+      width: 21rem;
+      height:180px;
+      padding-left:20px;
+      padding-right:20px;
+      gap:0.2rem;
+      align-items: center;
+    }
+
+    .number{
+      font-size: 37px;
+    }
+
+
+    .itemWrapper{
+        width:105px;
+        margin-top:0.5rem ;
+        align-content: center;
+        display: inline-flex;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    .itemWrapper > span{
+      font-size:14px;
+    }
+
+    .textWrapper > h3, h4, h6{
+      padding-top:5px;
+    }
+
+    /* MEMBERS AND RANKING RESPONSIVENESS*/
+
+    .members{
+      width:21rem;
+      height:200px;
+      max-height: 250px;
+      padding:10px;
+    }
+
+
+    .rankings{
+      width:21rem;
+      height:250px;
+      padding:10px;
+      max-height: 300px;
+    }
+
+    .userPic{
+      width:40px;
+      height:40px;
+    }
+
+    .userName{
+      font-size: 13px;
+    }
+
+    .rank{
+      font-size: 14px;
+    }
+
+  }
+
+
+  .stats{
+    display: flex;
+    justify-content: center;
+  }
+  .stats > h2{
+    font-weight: 500;
+    text-align: inherit;
+    
+  } 
+
+  /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+  @media only screen and (min-width:801px ) and (min-width: 768px){ 
+
+      .itemOne{
+        width: 17rem;
+      }
+
+      .itemTwo{
+          width:32rem;
+      }
+
+      .divWrapper{
+        width:100%;
+      }
+
+      .members{
+         width:50rem;
+      }
+
+      .rankings{
+        width:50rem;
+      }
+  }
+
+  

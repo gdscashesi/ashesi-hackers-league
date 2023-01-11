@@ -1,5 +1,5 @@
 // libraries
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 // components
 import Table from "./table/Table";
@@ -16,6 +16,9 @@ import { CHALLENGES, REGISTER } from "utils/constants";
 function Rankings() {
   const { headers, scores, sortScores } = useContext(AppContext);
 
+  // loading page when waiting for a response from the server
+  const [loading, ] = useState(true);
+
   return (
     <div className={rankingsStyles.rankingsWrapper}>
       <div className={rankingsStyles.banner}>
@@ -27,8 +30,9 @@ function Rankings() {
         </div>
       </div>
       
+      
       {
-        scores.length > 0 ? 
+        scores.length > 0 || !loading ? 
       <div className={rankingsStyles.tableParent}>
         <Table headers={headers} body={scores} sortScores={sortScores} />
       </div> : <div className={rankingsStyles.tableParent}>
@@ -41,6 +45,8 @@ function Rankings() {
             </div>
       </div>
       }
+
+
     </div>
   );
 }
