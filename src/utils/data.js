@@ -284,3 +284,10 @@ export const seasons = {
     ],
   },
 };
+
+export const generalRules = [
+  "Start by understanding the problem statement",
+  "Identify the key constraints: Look for any constraints in the problem that may affect your solution.",
+  "Look for patterns: Many algorithm problems can be solved by identifying patterns in the input data.",
+  "Consider different approaches: There may be multiple ways to solve an algorithm problem.",
+];

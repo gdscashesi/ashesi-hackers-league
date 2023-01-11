@@ -9,7 +9,7 @@ import Register from "pages/auth/register/Register";
 import Rankings from "pages/rankings/Rankings";
 import Challenges from "pages/challenges/Challenges";
 import SingleChallenge from "pages/single_challenge/SingleChallenge";
-import Sandbox from "pages/sandbox/Sandbox";  
+import Sandbox from "pages/sandbox/Sandbox";
 import PageNotFound from "pages/errors/page_not_found/PageNotFound";
 import Admin from "pages/admin/Admin";
 import Create from "pages/admin/create/Create";
@@ -29,6 +29,7 @@ import {
   CHALLENGES,
   SINGLE_CHALLENGE,
   SANDBOX,
+  INSTRUCTIONS,
   ADMIN,
   TEAM,
   PAGE_NOT_FOUND,
@@ -40,6 +41,7 @@ import {
 
 // contexts
 import AppContextProvider from "contexts/AppContext";
+import Instructions from "pages/instructions/Instructions";
 
 function App() {
   return (
@@ -53,6 +55,7 @@ function App() {
           <Route path={CHALLENGES} element={<Challenges />} />
           <Route path={SINGLE_CHALLENGE} element={<SingleChallenge />} />
           <Route path={SANDBOX} element={<Sandbox />} />
+          <Route path={INSTRUCTIONS} element={<Instructions />} />
           <Route element={<TeamProtectedRoute />}>
             <Route path={TEAM} element={<Team />} />
           </Route>

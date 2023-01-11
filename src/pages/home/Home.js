@@ -12,7 +12,7 @@ import homeStyles from "./homeStyles.module.scss";
 import Numbering from "./Numbering";
 
 // utils
-import { RANKINGS } from "utils/constants";
+import { INSTRUCTIONS, RANKINGS } from "utils/constants";
 
 function Home() {
   return (
@@ -30,6 +30,11 @@ function Home() {
         <strong> Algorithms, SQL, and Scripting (bash & python)</strong>
         <br />
         <button>
+          <Link to={INSTRUCTIONS}>league rules</Link>
+        </button>
+        <button
+          style={{ background: "rgba(255, 255, 255, 0.1)", animation: "none" }}
+        >
           <Link to={RANKINGS}>view rankings</Link>
         </button>
       </div>
